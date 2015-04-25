@@ -1,0 +1,244 @@
+CREATE DATABASE  IF NOT EXISTS `enrollment_records` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `enrollment_records`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: 127.0.0.1    Database: enrollment_records
+-- ------------------------------------------------------
+-- Server version	5.5.24-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `employee` (
+  `employee_id` int(10) NOT NULL,
+  `last_name_employee` varchar(255) NOT NULL,
+  `first_name_employee` varchar(255) NOT NULL,
+  `department` varchar(45) NOT NULL,
+  PRIMARY KEY (`employee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employee`
+--
+
+LOCK TABLES `employee` WRITE;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `enrollment`
+--
+
+DROP TABLE IF EXISTS `enrollment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `enrollment` (
+  `enrolled_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_number` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`enrolled_id`),
+  KEY `eid_fk_idx` (`id_number`),
+  CONSTRAINT `eid_fk` FOREIGN KEY (`id_number`) REFERENCES `students` (`id_number`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `enrollment`
+--
+
+LOCK TABLES `enrollment` WRITE;
+/*!40000 ALTER TABLE `enrollment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `enrollment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `enrollment_details`
+--
+
+DROP TABLE IF EXISTS `enrollment_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `enrollment_details` (
+  `enrolled_id` int(11) NOT NULL,
+  `id_number` varchar(10) NOT NULL,
+  `class_code` varchar(45) NOT NULL,
+  PRIMARY KEY (`enrolled_id`),
+  KEY `id_fkk_idx` (`id_number`),
+  KEY `cc_fk_idx` (`class_code`),
+  CONSTRAINT `ceid_fk` FOREIGN KEY (`enrolled_id`) REFERENCES `enrollment` (`enrolled_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `id_fkk` FOREIGN KEY (`id_number`) REFERENCES `students` (`id_number`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `cc_fk` FOREIGN KEY (`class_code`) REFERENCES `subjects_offered` (`class_code`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `enrollment_details`
+--
+
+LOCK TABLES `enrollment_details` WRITE;
+/*!40000 ALTER TABLE `enrollment_details` DISABLE KEYS */;
+/*!40000 ALTER TABLE `enrollment_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payments`
+--
+
+DROP TABLE IF EXISTS `payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payments` (
+  `or_no` int(11) NOT NULL AUTO_INCREMENT,
+  `enrolled_id` varchar(45) NOT NULL,
+  `amount_due` varchar(45) NOT NULL,
+  `payment_method` enum('Onsite','Paypal','bank') NOT NULL,
+  `date_paid` date DEFAULT NULL,
+  `time_paid` time DEFAULT NULL,
+  PRIMARY KEY (`or_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payments`
+--
+
+LOCK TABLES `payments` WRITE;
+/*!40000 ALTER TABLE `payments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `payments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schools`
+--
+
+DROP TABLE IF EXISTS `schools`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `schools` (
+  `school_id` int(2) NOT NULL,
+  `school_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`school_id`),
+  UNIQUE KEY `school_name_UNIQUE` (`school_name`),
+  UNIQUE KEY `school_id_UNIQUE` (`school_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schools`
+--
+
+LOCK TABLES `schools` WRITE;
+/*!40000 ALTER TABLE `schools` DISABLE KEYS */;
+/*!40000 ALTER TABLE `schools` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `students`
+--
+
+DROP TABLE IF EXISTS `students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `students` (
+  `id_number` varchar(10) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `course` int(2) NOT NULL,
+  `year` int(1) NOT NULL,
+  PRIMARY KEY (`id_number`),
+  KEY `course_fk_idx` (`course`),
+  CONSTRAINT `course_fk` FOREIGN KEY (`course`) REFERENCES `schools` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `students`
+--
+
+LOCK TABLES `students` WRITE;
+/*!40000 ALTER TABLE `students` DISABLE KEYS */;
+/*!40000 ALTER TABLE `students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `students_grades`
+--
+
+DROP TABLE IF EXISTS `students_grades`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `students_grades` (
+  `id_number` varchar(10) NOT NULL,
+  `grade` int(2) DEFAULT NULL,
+  PRIMARY KEY (`id_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `students_grades`
+--
+
+LOCK TABLES `students_grades` WRITE;
+/*!40000 ALTER TABLE `students_grades` DISABLE KEYS */;
+/*!40000 ALTER TABLE `students_grades` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `subjects_offered`
+--
+
+DROP TABLE IF EXISTS `subjects_offered`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subjects_offered` (
+  `class_code` varchar(45) NOT NULL,
+  `course_code` varchar(45) NOT NULL,
+  `descriptive_title` varchar(255) NOT NULL,
+  `units` varchar(45) NOT NULL,
+  `Time` time NOT NULL,
+  `day` varchar(45) NOT NULL,
+  `room` varchar(45) NOT NULL,
+  `reserved` int(5) NOT NULL,
+  `enrolled` int(5) NOT NULL,
+  `slots` int(5) NOT NULL,
+  `status` enum('Open','Dissolved','Temporarily Closed','Closed') NOT NULL,
+  PRIMARY KEY (`class_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `subjects_offered`
+--
+
+LOCK TABLES `subjects_offered` WRITE;
+/*!40000 ALTER TABLE `subjects_offered` DISABLE KEYS */;
+/*!40000 ALTER TABLE `subjects_offered` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-04-25 14:09:13
