@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.6.23, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: enrollment
 -- ------------------------------------------------------
@@ -252,6 +252,7 @@ DROP TABLE IF EXISTS `student`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `student` (
   `idno` int(11) NOT NULL,
+  `password` varchar(45) NOT NULL,
   `lastname` varchar(45) NOT NULL,
   `firstname` varchar(45) NOT NULL,
   `course` varchar(45) NOT NULL,
@@ -284,7 +285,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (2110000,'Tribiani','Joey','BSN',4,'M','23 Aurora Hill, Baguio City','Dagupan, Pangasinan','SLU','Filipino','Filipino','Cesar Tribiani','09361112233','Mason','Judith Tribiani','09645894612','Housewife','Single','Roman Catholic','Mary Allen Tribiani','7546395','Sister','23 Aurora Hill, Baguio City'),(2110001,'Green','Rachel','BSBA',4,'F','Ridgewood Subdivision, Baguio City','Ridgewood Subdivision, Baguio City','SLU','Filipino','Filipino','Richard Green','7896542','Businessman','Alice Green','7513696','Businesswoman','Single','Roman Catholic','Mindy Green','09261324567','Cousin','Ridgewood Subdivision, Baguio City'),(2110002,'Bing','Chandler','BSIT',4,'M','Leonila Hill, Baguio City','Leonila Hill, Baguio City','SLU','Filipino','Filipino','Carl Bing','1236548','Dancer','Charlotte Bing','09614527854','Actress','Single','Roman Catholic','Benedict Su','7569542','Godfather','Leonila Hill, Baguio City'),(2110003,'Gellar','Ross','BSCS',4,'M','La Trinidad, Benguet','La Trinidad, Benguet','SLU','Filipino','Filipino','Jack Gellar','09631231125','Mechanic','Rose Gellar','7896542','Social Worker','Single','Roman Catholic','Lily Gellar','7893215','Aunt','La Trinidad, Benguet'),(2110004,'Gellar','Monica','BSIT',4,'F','La Trinidad, Benguet','La Trinidad, Benguet','SLU','Filipino','Filipino','Jack Gellar','09631231125','Mechanic','Rose Gellar','7896542','Social Worker','Single','Roman Catholic','Lily Gellar','7893215','Aunt','La Trinidad, Benguet'),(2110005,'Buffet','Phoebe','BSN',4,'F','Queen of Peace, Baguio City','Queen of Peace, Baguio City','SLU','Filipino','Filipino','Kenny Buffet','9864521','Medical Representative','Lily Buffet','0963456235','Artist','Single','Roman Catholic','Ursula Buffet','78923255','Sister','Palma Street, Labsan, Baguio City');
+INSERT INTO `student` VALUES (2110000,'pizza','Tribiani','Joey','BSN',4,'M','23 Aurora Hill, Baguio City','Dagupan, Pangasinan','SLU','Filipino','Filipino','Cesar Tribiani','09361112233','Mason','Judith Tribiani','09645894612','Housewife','Single','Roman Catholic','Mary Allen Tribiani','7546395','Sister','23 Aurora Hill, Baguio City'),(2110001,'karen','Green','Rachel','BSBA',4,'F','Ridgewood Subdivision, Baguio City','Ridgewood Subdivision, Baguio City','SLU','Filipino','Filipino','Richard Green','7896542','Businessman','Alice Green','7513696','Businesswoman','Single','Roman Catholic','Mindy Green','09261324567','Cousin','Ridgewood Subdivision, Baguio City'),(2110002,'janice','Bing','Chandler','BSIT',4,'M','Leonila Hill, Baguio City','Leonila Hill, Baguio City','SLU','Filipino','Filipino','Carl Bing','1236548','Dancer','Charlotte Bing','09614527854','Actress','Single','Roman Catholic','Benedict Su','7569542','Godfather','Leonila Hill, Baguio City'),(2110003,'dino','Gellar','Ross','BSCS',4,'M','La Trinidad, Benguet','La Trinidad, Benguet','SLU','Filipino','Filipino','Jack Gellar','09631231125','Mechanic','Rose Gellar','7896542','Social Worker','Single','Roman Catholic','Lily Gellar','7893215','Aunt','La Trinidad, Benguet'),(2110004,'bing','Gellar','Monica','BSIT',4,'F','La Trinidad, Benguet','La Trinidad, Benguet','SLU','Filipino','Filipino','Jack Gellar','09631231125','Mechanic','Rose Gellar','7896542','Social Worker','Single','Roman Catholic','Lily Gellar','7893215','Aunt','La Trinidad, Benguet'),(2110005,'mike','Buffet','Phoebe','BSN',4,'F','Queen of Peace, Baguio City','Queen of Peace, Baguio City','SLU','Filipino','Filipino','Kenny Buffet','9864521','Medical Representative','Lily Buffet','0963456235','Artist','Single','Roman Catholic','Ursula Buffet','78923255','Sister','Palma Street, Labsan, Baguio City');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -297,4 +298,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-03 15:43:50
+-- Dump completed on 2015-05-03 23:06:35
