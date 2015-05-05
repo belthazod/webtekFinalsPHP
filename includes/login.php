@@ -1,5 +1,5 @@
 <?php
-include 'dbconnection';
+include 'dbconnection.php';
 
 $sql = "SELECT idno, password FROM student";
 $result = $conn->query($sql);
@@ -13,11 +13,13 @@ if ($result->num_rows > 0) {
 		$_SESSION["idno"] = $row["idno"];
 		$_SESSION["password"] =  $row["password"];
 
-
+        header('Location: ../home.html');
 		$flag = true;
-		break;
+
+		//break;
         }else{
         	$flag = false;
+
         }
         
     }
@@ -26,7 +28,7 @@ if ($result->num_rows > 0) {
         }
 
 } else {
-    //header('Location: index.php');
+    //header('Location: ../home.html');
 }
 
 ?>
