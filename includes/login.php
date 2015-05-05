@@ -13,10 +13,10 @@ if ($result->num_rows > 0) {
 		$_SESSION["idno"] = $row["idno"];
 		$_SESSION["password"] =  $row["password"];
 
-        header('Location: ../home.html');
+        
 		$flag = true;
-
-		//break;
+        header('Location: ../home.html');
+		break;
         }else{
         	$flag = false;
 
