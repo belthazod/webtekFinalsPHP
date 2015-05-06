@@ -110,43 +110,37 @@
         <!-- /.container -->
     </nav>
 
-	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
   ...
   <li role="presentation" class="dropdown-header">Dropdown header</li>
   ...
 </ul>
+<br>
 
- 
-    <div class="col-md-9">
-              
-   </div>
    
-     <div class="col-md-3">
-              <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
-      </form>
-   </div>
-              
-   
+      
+         
 
-	
-<div class="well">
-
-
-    <table class="table">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"> Available Subjects</h3>
+            
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Available Subjects" />
+          </div>
+          
+    <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
           <th>Class Code</th>
-          <th>Course Number</th>
+          <th>Course No.</th>
           <th>Descriptive Title</th>
-          <th>Time and Day</th>
-		  <th>Room</th>
-		  <th>Units</th>
-		
-       
+          <th>Time/Day</th>
+      <th>Room</th>
+      <th>Units</th>
+          <th style="width: 36px;"></th>
         </tr>
       </thead>
       <tbody>
@@ -155,9 +149,9 @@
           <td>IT 324L</td>
           <td>Web Systems and Technologies</td>
           <td>1:00-2:30 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S326</td>
+      <td>1</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -167,9 +161,9 @@
           <td>IT 324</td>
           <td>Web Systems and Technologies</td>
           <td>10:30-11:30</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S423</td>
+      <td>2</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -179,9 +173,9 @@
           <td>IT 323L</td>
           <td>Integrative Programming</td>
           <td>1:00-2:30 MTH</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S326</td>
+      <td>1</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -191,9 +185,9 @@
           <td>IT 323</td>
           <td>Integrative Programming</td>
           <td>1:00-2:00 TF</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S423</td>
+      <td>2</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -203,9 +197,9 @@
           <td>IT 423</td>
           <td>Information Systems Planning </td>
           <td>9:30-10:30</td>
-		  <td>S425</td>
-		  <td>3</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S425</td>
+      <td>3</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -215,22 +209,22 @@
           <td>IT 312L</td>
           <td>Programming Applications</td>
           <td>10:30-12:00 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S326</td>
+      <td>1</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
         </tr>
-		
-		<tr>
+
+        <tr>
           <td>9570</td>
           <td>IT 324L</td>
           <td>Web Systems and Technologies</td>
           <td>1:00-2:30 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S326</td>
+      <td>1</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -240,9 +234,9 @@
           <td>IT 324</td>
           <td>Web Systems and Technologies</td>
           <td>10:30-11:30</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S423</td>
+      <td>2</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -252,9 +246,9 @@
           <td>IT 323L</td>
           <td>Integrative Programming</td>
           <td>1:00-2:30 MTH</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S326</td>
+      <td>1</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
@@ -264,202 +258,20 @@
           <td>IT 323</td>
           <td>Integrative Programming</td>
           <td>1:00-2:00 TF</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
+      <td>S423</td>
+      <td>2</td>
+      <td> <button type="submit" class="btn btn-default">Add</button> </td>
               <a href="user.html"><i class="icon-pencil"></i></a>
               <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
         </tr>
-        <tr>
-          <td>9558</td>
-          <td>IT 423</td>
-          <td>Information Systems Planning </td>
-          <td>9:30-10:30</td>
-		  <td>S425</td>
-		  <td>3</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9560</td>
-          <td>IT 312L</td>
-          <td>Programming Applications</td>
-          <td>10:30-12:00 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-		
-		<tr>
-          <td>9570</td>
-          <td>IT 324L</td>
-          <td>Web Systems and Technologies</td>
-          <td>1:00-2:30 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9569</td>
-          <td>IT 324</td>
-          <td>Web Systems and Technologies</td>
-          <td>10:30-11:30</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9571</td>
-          <td>IT 323L</td>
-          <td>Integrative Programming</td>
-          <td>1:00-2:30 MTH</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9572</td>
-          <td>IT 323</td>
-          <td>Integrative Programming</td>
-          <td>1:00-2:00 TF</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9558</td>
-          <td>IT 423</td>
-          <td>Information Systems Planning </td>
-          <td>9:30-10:30</td>
-		  <td>S425</td>
-		  <td>3</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9560</td>
-          <td>IT 312L</td>
-          <td>Programming Applications</td>
-          <td>10:30-12:00 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-		
-		<tr>
-          <td>9570</td>
-          <td>IT 324L</td>
-          <td>Web Systems and Technologies</td>
-          <td>1:00-2:30 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9569</td>
-          <td>IT 324</td>
-          <td>Web Systems and Technologies</td>
-          <td>10:30-11:30</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9571</td>
-          <td>IT 323L</td>
-          <td>Integrative Programming</td>
-          <td>1:00-2:30 MTH</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9572</td>
-          <td>IT 323</td>
-          <td>Integrative Programming</td>
-          <td>1:00-2:00 TF</td>
-		  <td>S423</td>
-		  <td>2</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9558</td>
-          <td>IT 423</td>
-          <td>Information Systems Planning </td>
-          <td>9:30-10:30</td>
-		  <td>S425</td>
-		  <td>3</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>9560</td>
-          <td>IT 312L</td>
-          <td>Programming Applications</td>
-          <td>10:30-12:00 WS</td>
-		  <td>S326</td>
-		  <td>1</td>
-		  <td ><input type="checkbox" aria-label="..."></td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
+   
+
       </tbody>
     </table>
-</div>
 
-<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Delete Confirmation</h3>
-    </div>
-    <div class="modal-body">
-        <p class="error-text">Are you sure you want to delete the user?</p>
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-    </div>
-</div>
 
-<!-- Pagination -->
+    <!-- Pagination -->
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -488,10 +300,178 @@
             </div>
         </div>
 
-       
-        <!-- /.row -->
+</div>
 
-        <hr>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-6">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title"> Added Subjects</h3>
+            
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Subjects" />
+          </div>
+          
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th>Class Code</th>
+          <th>Course Number</th>
+          <th>Descriptive Title</th>
+          <th>Time and Day</th>
+      <th>Room</th>
+      <th>Units</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9570</td>
+          <td>IT 324L</td>
+          <td>Web Systems and Technologies</td>
+          <td>1:00-2:30 WS</td>
+      <td>S326</td>
+      <td>1</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9569</td>
+          <td>IT 324</td>
+          <td>Web Systems and Technologies</td>
+          <td>10:30-11:30</td>
+      <td>S423</td>
+      <td>2</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9571</td>
+          <td>IT 323L</td>
+          <td>Integrative Programming</td>
+          <td>1:00-2:30 MTH</td>
+      <td>S326</td>
+      <td>1</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9572</td>
+          <td>IT 323</td>
+          <td>Integrative Programming</td>
+          <td>1:00-2:00 TF</td>
+      <td>S423</td>
+      <td>2</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9558</td>
+          <td>IT 423</td>
+          <td>Information Systems Planning </td>
+          <td>9:30-10:30</td>
+      <td>S425</td>
+      <td>3</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9560</td>
+          <td>IT 312L</td>
+          <td>Programming Applications</td>
+          <td>10:30-12:00 WS</td>
+      <td>S326</td>
+      <td>1</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>9570</td>
+          <td>IT 324L</td>
+          <td>Web Systems and Technologies</td>
+          <td>1:00-2:30 WS</td>
+      <td>S326</td>
+      <td>1</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9569</td>
+          <td>IT 324</td>
+          <td>Web Systems and Technologies</td>
+          <td>10:30-11:30</td>
+      <td>S423</td>
+      <td>2</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9571</td>
+          <td>IT 323L</td>
+          <td>Integrative Programming</td>
+          <td>1:00-2:30 MTH</td>
+      <td>S326</td>
+      <td>1</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9572</td>
+          <td>IT 323</td>
+          <td>Integrative Programming</td>
+          <td>1:00-2:00 TF</td>
+      <td>S423</td>
+      <td>2</td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+   
+
+      </tbody>
+    </table>
+
+     
+
+</div>
+   <div class="col-md-10">
+         
+        </div>
+          
+          <div class="col-md-2">
+         <button type="submit" class="btn btn-primary">Pre-Enroll</button>
+        </div>
+
+
+        </div>
+     
+
+      </div>
+    </div>
+  
+  
+
+
+
 
         <!-- Footer -->
         <footer>
@@ -510,6 +490,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- script.js -->
+    <script src="js/script.js"></script>
 
 </body>
 
