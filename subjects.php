@@ -20,6 +20,10 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Drag and Drop -->
+    <script src="jq/jquery-2.1.4.min.js"></script>
+    <script src="jq/jquery-ui.min.js"></script>
+    
 
 </head>
 
@@ -128,24 +132,24 @@
             
           </div>
           <div class="panel-body">
-            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Available Subjects" />
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#t_draggable1" placeholder="Filter Available Subjects" />
           </div>
           
-    <table class="table table-hover" id="dev-table">
-      <thead>
+    <table class="tables_ui table table-hover" id="t_draggable1">
+      <tbody class="t_sortable">
+
         <tr>
        
           <th>Class Code</th>
           <th>Course No.</th>
           <th>Descriptive Title</th>
-          <th>Time/Day</th>
+          <th>Time</th>
+          <th>Days</th>
       <th>Room</th>
       <th>Units</th>
-       <th></th>
-          <th style="width: 36px;"></th>
         </tr>
-      </thead>
-      <tbody>
+
+  
       
  <?php 
               $sql = "SELECT classcode, courseno, description, time, days,room, units from class natural join course limit 10";
@@ -162,7 +166,6 @@
                   <td>'. $resultRow['days'] .'</td>
                   <td>'. $resultRow['room'] .'</td>
                   <td>'. $resultRow['units'] .'</td>'."
-                  <td><input type='submit' name='Add' value='Add' class= 'btn btn-default'></td>
                 </tr>";
               }
             echo 
@@ -218,22 +221,23 @@
             
           </div>
           <div class="panel-body">
-            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table2" placeholder="Filter Subjects" />
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#t_draggable2" placeholder="Filter Subjects" />
           </div>
           
-    <table class="table table-hover" id="dev-table2">
-      <thead>
+    <table class="tables_ui table table-hover" id="t_draggable2">
+      <tbody class="t_sortable">
+
         <tr>
           <th>Class Code</th>
           <th>Course Number</th>
           <th>Descriptive Title</th>
-          <th>Time and Day</th>
+          <th>Time</th>
+          <th>Days</th>
       <th>Room</th>
       <th>Units</th>
-          <th style="width: 36px;"></th>
+
         </tr>
-      </thead>
-      
+
 
       </tbody>
     </table>
@@ -273,8 +277,7 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

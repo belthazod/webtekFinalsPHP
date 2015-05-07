@@ -120,3 +120,14 @@ margin-right: 15px !important;
 padding: 0px;
 overflow: hidden;
 }
+
+
+/* Drag and drop Trisha Francisco */
+         
+    .t_sortable tr, .ui-sortable-helper {
+      cursor: pointer;
+    }
+    .t_sortable tr:first-child {
+      cursor: default;
+    }
+/* Drag and drop Trisha Francisco */
