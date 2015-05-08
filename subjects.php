@@ -3,27 +3,11 @@
 
 <head>
     <?php include 'includes/dbconnection.php' ?>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="webtek 2015">
-    <meta name="author" content="">
+    <?php include 'includes/headerelements.php' ?>
+    <?php include 'includes/header.php' ?>
 
-    <title>Webtek fnals 2015</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Drag and Drop -->
-    <script src="jq/jquery-2.1.4.min.js"></script>
-    <script src="jq/jquery-ui.min.js"></script>
-    
+    <title>SPre Enroll</title>
 
 </head>
 
@@ -79,9 +63,9 @@
                                                                 <a href="#">Change Photo</a></p>
                                                         </div> 
                                                         <div class="col-md-7">
-                                                            <span>STUDENT NAME</span>
+                                                            <span><?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></span>
                                                             <p class="text-muted small">
-                                                               ID NO.</p>
+                                                               <?php echo $_SESSION['idno']?></p>
                                                             <div class="divider">
                                                             </div>
                                                             <a href="#" class="btn btn-primary btn-sm active">View Profile</a>
