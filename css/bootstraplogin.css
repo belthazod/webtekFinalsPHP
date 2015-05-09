@@ -179,3 +179,9 @@ form.login a:hover
     padding: 10px;
     left: 45%;
 }
+.container {
+  position: relative;
+  height: 14rem;
+  top:25%;
+}
+
