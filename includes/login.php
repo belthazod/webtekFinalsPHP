@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         $_SESSION["lastname"] =  $row["lastname"];
         
 		$flag = true;
-        header('Location: ../home.html');
+        header('Location: ../home.php');
 		break;
         }else{
         	$flag = false;
