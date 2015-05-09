@@ -2,7 +2,7 @@
 session_start();
 include 'dbconnection.php';
 
-$sql = "SELECT images,idno, password, firstname, lastname FROM student";
+$sql = "SELECT idno, password, firstname, lastname FROM student";
 $result = $conn->query($sql);
 $flag = false;
 if ($result->num_rows > 0) {
