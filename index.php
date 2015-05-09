@@ -9,6 +9,15 @@
      include 'includes/dbconnection.php';
      include 'includes/headerelements.php';
      include 'includes/header.php'; 
+
+                        if(isset($_GET["loggedout"]) && $_GET["loggedout"]==true){
+                        echo '<div class="alert alert-warning" role="alert">You need to log in first.</div>';
+                        }
+                        if(isset($_GET["failed"]) && $_GET["failed"]==true){
+                        echo '<div class="alert alert-danger" role="alert">Incorrect username/password</div>';
+                        }
+                        
+                   
      ?>
 <link href="css/bootstraplogin.css" rel="stylesheet">
 

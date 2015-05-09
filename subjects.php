@@ -6,6 +6,9 @@
      include 'includes/dbconnection.php';
      include 'includes/headerelements.php';
      include 'includes/header.php'; 
+
+  if(!isset($_SESSION["idno"])){
+    header('Location: index.php?loggedout=true');} ?>
      ?>
 
 
