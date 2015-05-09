@@ -9,7 +9,7 @@
      ?>
 
 
-    <title>SPre Enroll</title>
+    <title>Pre Enroll</title>
 
 </head>
 

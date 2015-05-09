@@ -4,26 +4,17 @@
 <head>
 
 
-    <?php include 'includes/dbconnection.php' ?>
+   <head>
+    <?php
+     include 'includes/dbconnection.php';
+     include 'includes/headerelements.php';
+     include 'includes/header.php'; 
+     ?>
+<link href="css/bootstraplogin.css" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="webtek 2015">
-    <meta name="author" content="">
+    <title>Pre Enroll</title>
 
-    <title>Webtek fnals 2015</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	
-	<link href="css/bootstraplogin.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
 
 
 </head>

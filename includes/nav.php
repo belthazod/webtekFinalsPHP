@@ -61,7 +61,7 @@
                                                     <div class="navbar-footer-content">
                                                         <div class="row">
                                                             <div class="col-md-6">
-                                                                <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
+                                                                <a href="changepass.php" class="btn btn-default btn-sm">Change Passowrd</a>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <a href="includes/logout.php" class="btn btn-default btn-sm pull-right">Sign Out</a>
