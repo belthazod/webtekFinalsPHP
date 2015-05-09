@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 5.6.23, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
--- Host: localhost    Database: enrollment2
+-- Host: localhost    Database: enrollment
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -193,6 +193,33 @@ INSERT INTO `enrollmentdetails` VALUES (1,9367),(1,9616),(1,9644);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `grade`
+--
+
+DROP TABLE IF EXISTS `grade`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `grade` (
+  `idno` int(11) NOT NULL,
+  `classcode` varchar(45) DEFAULT NULL,
+  `courseno` varchar(45) DEFAULT NULL,
+  `semester` varchar(45) DEFAULT NULL,
+  `schoolyear` varchar(45) DEFAULT NULL,
+  `finalgrade` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `grade`
+--
+
+LOCK TABLES `grade` WRITE;
+/*!40000 ALTER TABLE `grade` DISABLE KEYS */;
+/*!40000 ALTER TABLE `grade` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `payment`
 --
 
@@ -300,4 +327,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-04 23:34:04
+-- Dump completed on 2015-05-09 10:46:31
