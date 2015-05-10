@@ -45,42 +45,27 @@
       <tbody class="t_sortable">
 
         <tr>
-       
           <th>Class Code</th>
           <th>Course No.</th>
           <th>Descriptive Title</th>
           <th>Time</th>
           <th>Days</th>
-      <th>Room</th>
-      <th>Units</th>
+          <th>Room</th>
+          <th>Units</th>
         </tr>
 
-  
-      
- <?php 
-              $sql = "SELECT classcode, courseno, description, time, days,room, units from class natural join course limit 10";
-              
+        <?php 
+          $query = "SELECT classcode, courseno, description, time, days,room, units from class natural join course";       
+          $records_per_page=10;
+          $newquery = $paginate->paging($query,$records_per_page);
+          $paginate->dataview($newquery);
+          $paginate->paginglink($query,$records_per_page);    
+        ?>
 
-              $rs = $conn->query($sql);
-              while($resultRow = $rs->fetch_assoc()) {
-              echo '<tr>
-                  
-                  <td>'. $resultRow['classcode'] .'</td>
-                  <td>'. $resultRow['courseno'] .'</td>
-                  <td>'. $resultRow['description'] .'</td>
-                  <td>'. $resultRow['time'] .'</td>
-                  <td>'. $resultRow['days'] .'</td>
-                  <td>'. $resultRow['room'] .'</td>
-                  <td>'. $resultRow['units'] .'</td>'."
-                </tr>";
-              }
-            echo 
-            '
-            </tbody>
-            </table>';
-    ?>
+      </tbody>
+    </table>
 
-    <!-- Pagination -->
+<!-- Pagination 
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -107,7 +92,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> --> 
 
 </div>
 
