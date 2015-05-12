@@ -24,7 +24,7 @@
 
 <div class="row">
 <div class="col-sm-6">
-<span id="8char" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span>  <br>
+ <br>
 
 </div>
 
