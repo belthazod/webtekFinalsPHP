@@ -4,6 +4,7 @@ body
     background-size: cover;
     padding: 0;
     margin: 0;
+	margin-top:30px; 
 }
 
 .wrap
@@ -50,7 +51,7 @@ form.login input[type="text"], form.login input[type="password"]
     letter-spacing: 1px;
     margin-bottom: 5px;
     color: #FFFFFF;
-    outline: 0;
+l    outline: 0;
 }
 
 form.login input[type="submit"]
@@ -183,5 +184,17 @@ form.login a:hover
   position: relative;
   height: 14rem;
   top:25%;
+}
+
+hr.message-inner-separator{
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
 }
 
