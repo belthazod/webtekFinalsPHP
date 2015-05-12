@@ -2,7 +2,7 @@
 session_start();
 include 'dbconnection.php';
 
-$sql = "SELECT idno, password, firstname, lastname FROM student";
+$sql = "SELECT image, idno, password, firstname, lastname FROM student";
 $result = $conn->query($sql);
 $flag = false;
 if ($result->num_rows > 0) {
@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
     	
         if($row["idno"] == $_POST["idno"] && $row["password"] == $_POST["password"]){
         	// Set session variables
-      
+        $_SESSION["image"] = $row["iamge"];
 		$_SESSION["idno"] = $row["idno"];
 		$_SESSION["password"] =  $row["password"];
         $_SESSION["firstname"] =  $row["firstname"];

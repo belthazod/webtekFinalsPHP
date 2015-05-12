@@ -1,4 +1,20 @@
   <!-- Navigation -->
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php
+     include 'includes/dbconnection.php';
+ 
+
+  if(!isset($_SESSION["idno"])){
+    header('Location: index.php?loggedout=true');}
+     ?>
+
+
+    <title>Pre Enroll</title>
+
+</head>
    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,12 +38,12 @@
                     </li>
 
                     <li>
-                        <a href="#">Payments</a>
+                        <a href="payments.php">Payments</a>
                     </li>
 
                     
                     <li>
-                        <a href="about.php ">About</a>
+                        <a href="about.php">About</a>
                     </li>
 
                     <li>
@@ -42,8 +58,12 @@
                                                     <div class="row">
 
                                                         <div class="col-md-5">
-                                                            <img src="http://placehold.it/120x120"
-                                                                alt="Alternate Text" class="img-responsive" />
+                                                            <?php
+
+                                                            echo '<img src="data:image/png;base64,'.base64_encode( $_SESSION['image'] ).'"/>';
+                                                            //<img src="http://placehold.it/120x120"
+                                                              //  alt="Alternate Text" class="img-responsive" />
+                                                            ?>
                                                             <p class="text-center small">
                                                                 <a href="#">Change Photo</a></p>
                                                         </div> 
@@ -53,7 +73,7 @@
                                                                <?php echo $_SESSION['idno']?></p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href="#" class="btn btn-primary btn-sm active">View Profile</a>
+                                                            <a href= "profile.php?idno=" class="btn btn-primary btn-sm active">View Profile</a>
                                                         </div>
                                                     </div>
                                                 </div>
