@@ -11,14 +11,28 @@
      include 'includes/header.php'; 
 
                         if(isset($_GET["loggedout"]) && $_GET["loggedout"]==true){
-                        echo '<div class="alert alert-warning" role="alert">You need to log in first.</div>';
+                        echo ' <div class="col-sm-6 col-md-6">
+										<div class="alert alert-info">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+											<span class="glyphicon glyphicon-info-sign"></span> <strong>Message</strong>
+											<hr class="message-inner-separator">
+												<p>You need to login first.</p>
+										</div>
+								 </div>';
                         }
                         if(isset($_GET["failed"]) && $_GET["failed"]==true){
-                        echo '<div class="alert alert-danger" role="alert">Incorrect username/password</div>';
+                        echo ' <div class="col-sm-6 col-md-6">
+									<div class="alert alert-danger">
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+											×</button>
+										<span class="glyphicon glyphicon-hand-right"></span> <strong>Warning!</strong>
+										<hr class="message-inner-separator">
+										<p>Please re-enter<br>
+										   The password or username you entered is incorrect. Please try again (make sure your caps lock is off).</p>
+									</div>
+								</div>';
                         }
-                        
-                   
-     ?>
+                         ?>
 <link href="css/bootstraplogin.css" rel="stylesheet">
 
     <title>Pre Enroll</title>
