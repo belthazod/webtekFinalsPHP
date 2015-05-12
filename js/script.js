@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
@@ -97,3 +99,14 @@ $(document).ready(function() {
   });
 });
 // Drag and Drop *Trisha Francisco
+
+//block selector Danica desembrana
+$(function(){
+  $('div.block-chooser').not('.disabled').find('div.block-chooser-item').on('click', function(){
+    $(this).parent().parent().find('div.block-chooser-item').removeClass('selected');
+    $(this).addClass('selected');
+    $(this).find('input[type="radio"]').prop("checked", true);
+    
+  });
+});
+//block selector

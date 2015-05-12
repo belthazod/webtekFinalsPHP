@@ -27,6 +27,125 @@
 </ul>
 <br>
 
+
+    
+    <div class="row form-group block-chooser panel panel-primary">
+      <br>
+
+       <div class="col-md-12">
+    
+      <div class="col-md-1">
+        <div class="block-chooser-item selected">
+          
+                
+            <span class="title">Block 1</span>
+            
+            <input type="radio" name="block" value="1" checked="checked">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+      
+       <div class="col-md-1">
+        <div class="block-chooser-item">
+         
+                
+            <span class="title">Block 2</span>
+            
+            <input type="radio" name="block" value="2">
+         
+          <div class="clear"></div>
+        </div>
+      </div>
+      
+       <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 3</span>
+            
+            <input type="radio" name="block" value="3">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 4</span>
+            
+            <input type="radio" name="block" value="4">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 5</span>
+            
+            <input type="radio" name="block" value="5">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 6</span>
+            
+            <input type="radio" name="block" value="6">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 7</span>
+            
+            <input type="radio" name="block" value="7">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 8</span>
+            
+            <input type="radio" name="block" value="8">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="block-chooser-item">
+          
+               
+            <span class="title">Block 9</span>
+            
+            <input type="radio" name="block" value="9">
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      
+
+    </div>
+      
+    </div>
    
       
          
@@ -100,10 +219,11 @@
         </div>
 
 
-      </div>
-    </div>
+  
 
-  </div>
+
+
+
 
   <div class="col-md-6">
         <div class="panel panel-success">
