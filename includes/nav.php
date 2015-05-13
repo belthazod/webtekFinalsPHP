@@ -73,7 +73,7 @@
                                                                <?php echo $_SESSION['idno']?></p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href= "profile.php?idno=" class="btn btn-primary btn-sm active">View Profile</a>
+                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm active">View Profile</a>
                                                         </div>
                                                     </div>
                                                 </div>
