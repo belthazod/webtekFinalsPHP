@@ -81,12 +81,10 @@
                                                     <div class="navbar-footer-content">
                                                         <div class="row">
                                                             <div class="col-md-6">
-<<<<<<< .mine
+
+
                                                                 <a href="passwordform.php" class="btn btn-default btn-sm">Change Password</a>
-=======
-                                                                <a href="changepass.php" class="btn btn-default btn-sm">Change Password</a>
->>>>>>> .r46
-                                                            </div>
+                                            </div>
                                                             <div class="col-md-6">
                                                                 <a href="includes/logout.php" class="btn btn-default btn-sm pull-right">Sign Out</a>
                                                             </div>
