@@ -60,10 +60,11 @@
                                                         <div class="col-md-5">
                                                            
 
-                                                           
-                                                            <img src="http://placehold.it/120x120"
-                                                                alt="Alternate Text" class="img-responsive" />
-                                                           
+                                                           <?php
+                                                           echo '<img src="data:image/jpeg;base64,'.base64_encode( $_SESSION['image'] ).'"/>';
+                                                            //<img src="http://placehold.it/120x120"
+                                                              //  alt="Alternate Text" class="img-responsive" />
+                                                           ?>
                                                             <p class="text-center small">
                                                                 <a href="#">Change Photo</a></p>
                                                         </div> 

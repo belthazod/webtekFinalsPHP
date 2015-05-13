@@ -259,7 +259,7 @@
    <div class="col-md-10">
          
         </div>
-          
+          <form action="payments.php" method="post">
           <div class="col-md-2">
          <button type="submit" class="btn btn-primary">Pre-Enroll</button>
         </div>
