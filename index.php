@@ -27,7 +27,7 @@
 											×</button>
 										<span class="glyphicon glyphicon-hand-right"></span> <strong>Warning!</strong>
 										<hr class="message-inner-separator">
-										<p>Please re-enter<br>
+									
 										   The password or username you entered is incorrect. Please try again (make sure your caps lock is off).</p>
 									</div>
 								</div>';

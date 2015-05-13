@@ -37,9 +37,9 @@
                         <a href="subjects.php ">Pre-Enroll</a>
                     </li>
 
-                    <li>
+                    <!--<li>
                         <a href="payments.php">Payments</a>
-                    </li>
+                    </li>-->
 
                     
                     <li>

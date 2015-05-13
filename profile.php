@@ -37,7 +37,7 @@
          <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $resultRow['image'] ).'"/>'; ?>
 
           <!-- Text input-->
-
+          
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">ID Number</label>
             <div class="col-sm-4">
