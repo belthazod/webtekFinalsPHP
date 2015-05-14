@@ -39,9 +39,10 @@
             </div>
             <div class="col-md-6">
                 <h2>About SLU Online Enrollment</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+                <p>Welcome to Saint Louis University online enrollment! </p>
+                <p>Students can now enroll online! No more lining up at the Registrar's Office. Students can enroll anywhere within their scheduled period, in their preferred course and section. Students can always view the actual enrollment count per course and section. </p>
+                <p>To get started, an authorized user must login to access the Saint Louis University online enrollment, it readily recognizes the user as an active student and displays the appropriate features or settings the user can access.</p>
+                <p>To make life easier, students can inquire through this portal: information about course schedule, account balance, and transcript of records.</p>
             </div>
         </div>
         <!-- /.row -->
