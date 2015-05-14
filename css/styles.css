@@ -190,3 +190,14 @@ div.block-chooser{
       top: 0;
       visibility:hidden;
     }
+    /*css for block selector Danica Desembrana*/
+
+    /*Number of units Trisha Francisco*/
+    #noOfUnits {
+      font-weight: bold;
+    }
+
+    #units {
+      font-weight: bolder;
+    }
+    /*Number of units Trisha Francisco*/

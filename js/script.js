@@ -110,3 +110,39 @@ $(function(){
   });
 });
 //block selector
+
+
+// Display Number of Units Trisha Francisco
+function displayUnits(event) {
+
+    var p = document.getElementById('units');
+
+    p.innerHTML = "";
+
+    var targetTable = document.getElementById('t_draggable2');
+    var units = 0;
+
+    for (var c = 1; c < targetTable.rows.length; c++) {
+        units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
+    }
+
+    p.innerHTML = units;
+}
+// Display Number of Units Trisha Francisco
+
+// Validate Number of Units Trisha Francisco
+function validateUnits() {
+    var p = document.getElementById('units');
+
+    var targetTable = document.getElementById('t_draggable2');
+    var units = 0;
+
+    for (var c = 1; c < targetTable.rows.length; c++) {
+        units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
+    }
+
+    if (units > 18) {
+        alert("You have exceeded the maximum allowed number of units.");
+    }
+}
+// Validate Number of Units Trisha Francisco

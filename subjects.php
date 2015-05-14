@@ -248,7 +248,7 @@
             <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#t_draggable2" placeholder="Filter Subjects" />
           </div>
           
-    <table class="tables_ui table table-hover" id="t_draggable2">
+    <table class="tables_ui table table-hover" id="t_draggable2" onmouseover="displayUnits(event)">
       <tbody class="t_sortable">
 
         <tr>
@@ -266,15 +266,17 @@
       </tbody>
     </table>
 
-     
 
 </div>
+     <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
+
+
    <div class="col-md-10">
          
         </div>
           <form action="payments.php" method="post">
           <div class="col-md-2">
-         <button type="submit" class="btn btn-primary">Pre-Enroll</button>
+         <button type="submit" class="btn btn-primary" onclick="validateUnits()">Pre-Enroll</button>
         </div>
 
 
