@@ -132,17 +132,35 @@ function displayUnits(event) {
 
 // Validate Number of Units Trisha Francisco
 function validateUnits() {
-    var p = document.getElementById('units');
-
+  
+   
     var targetTable = document.getElementById('t_draggable2');
     var units = 0;
+    var p = document.getElementById('units');
 
     for (var c = 1; c < targetTable.rows.length; c++) {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
     }
 
-    if (units > 18) {
-        alert("You have exceeded the maximum allowed number of units.");
+    document.getElementById('eform').onsubmit = function() {
+        
+        if (year == 4 || year == 3) {
+            if (units > 18) {
+                alert("You have exceeded the maximum allowed number of units.");
+                return false;
+            } else {
+                return true;
+            }
+
+        } else if (year == 2 || year == 1) {
+            if (units > 26) {
+                alert("You have exceeded the maximum allowed number of units.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
     }
 }
 // Validate Number of Units Trisha Francisco

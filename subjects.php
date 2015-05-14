@@ -8,9 +8,16 @@
      include 'includes/header.php'; 
 
   if(!isset($_SESSION["idno"])){
-    header('Location: index.php?loggedout=true');} ?>
-     ?>
+    header('Location: index.php?loggedout=true');} 
 
+     
+    $sql = "SELECT * FROM student where idno = ".$_SESSION["idno"];
+    $rs = $conn->query($sql);
+    $resultRow = $rs->fetch_assoc() 
+     
+    ?>
+
+    <script>var year = '<?php echo $resultRow['year'] ?>';</script>
 
     <title>Pre Enroll</title>
 
@@ -274,7 +281,7 @@
    <div class="col-md-10">
          
         </div>
-          <form action="payments.php" method="post">
+          <form id="eform" onsubmit="return isValidForm()" action="payments.php" method="post">
           <div class="col-md-2">
          <button type="submit" class="btn btn-primary" onclick="validateUnits()">Pre-Enroll</button>
         </div>
