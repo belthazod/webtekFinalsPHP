@@ -174,6 +174,19 @@
         </tr>
 
         <?php 
+          try
+          {
+            $DB_con = new PDO("mysql:host={$servername};dbname={$dbname}",$username,$password);
+            $DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          }
+          catch(PDOException $exception)
+          {
+            echo $exception->getMessage();
+          }
+
+          include_once 'pagination.php';
+          $paginate = new paginate($DB_con);
+
           $query = "SELECT classcode, courseno, description, time, days,room, units from class natural join course";       
           $records_per_page=10;
           $newquery = $paginate->paging($query,$records_per_page);
