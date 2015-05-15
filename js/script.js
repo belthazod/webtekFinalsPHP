@@ -142,6 +142,8 @@ function validateUnits() {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
     }
 
+
+
     document.getElementById('eform').onsubmit = function() {
         
         if (year == 4 || year == 3) {
@@ -149,7 +151,10 @@ function validateUnits() {
                 alert("You have exceeded the maximum allowed number of units.");
                 return false;
             } else {
+                alert("Your schedule has been submitted to the dean for approval.");
                 return true;
+
+
             }
 
         } else if (year == 2 || year == 1) {
@@ -157,10 +162,25 @@ function validateUnits() {
                 alert("You have exceeded the maximum allowed number of units.");
                 return false;
             } else {
+                alert("Your schedule has been submitted to the dean for approval.");
                 return true;
+                
+
             }
         }
 
     }
+
 }
 // Validate Number of Units Trisha Francisco
+
+// Delete subject on double click Trisha Francisco
+$('#t_draggable2').dblclick(function(e){
+
+    $(e.target).parent().remove(); // using jQuery
+
+
+    $('#t_draggable1 tr:first-child').after($(e.target).parent());
+
+})
+// Delete subject on double click Trisha Francisco
