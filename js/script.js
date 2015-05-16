@@ -146,28 +146,17 @@ function validateUnits() {
 
     document.getElementById('eform').onsubmit = function() {
         
-        if (year == 4 || year == 3) {
-            if (units > 18) {
+        if (units > maxUnits) {
                 alert("You have exceeded the maximum allowed number of units.");
                 return false;
             } else {
-                alert("Your schedule has been submitted to the dean for approval.");
+                confirm("Are you sure with the schedule you selected?");
                 return true;
 
 
             }
 
-        } else if (year == 2 || year == 1) {
-            if (units > 26) {
-                alert("You have exceeded the maximum allowed number of units.");
-                return false;
-            } else {
-                alert("Your schedule has been submitted to the dean for approval.");
-                return true;
-                
-
-            }
-        }
+    
 
     }
 

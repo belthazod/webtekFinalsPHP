@@ -17,7 +17,8 @@
      
     ?>
 
-    <script>var year = '<?php echo $resultRow['year'] ?>';</script>
+    <script>var year = '<?php echo $resultRow['year'] ?>';
+            var maxUnits = '<?php echo $resultRow['maxunits'] ?>'; </script>
 
     <title>Pre Enroll</title>
 
