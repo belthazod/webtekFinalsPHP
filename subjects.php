@@ -197,12 +197,19 @@
           $query = "SELECT classcode, courseno, description, time, days,room, units from class natural join course";       
           $records_per_page=10;
           $newquery = $paginate->paging($query,$records_per_page);
-          $paginate->dataview($newquery);
-          $paginate->paginglink($query,$records_per_page);    
+          $paginate->dataview($newquery);  
         ?>
 
       </tbody>
     </table>
+
+    <div class="panel-heading">
+            <h3 class="panel-title" align="center"> 
+                <?php
+                  $newquery =  $paginate->paginglink($query,$records_per_page);
+                ?>
+            </h3>
+    </div>
 
 <!-- Pagination 
         <div class="row text-center">
