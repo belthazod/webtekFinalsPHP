@@ -130,6 +130,30 @@ function displayUnits(event) {
 }
 // Display Number of Units Trisha Francisco
 
+
+// Validate same course code Trisha Francisco
+$('#t_draggable1').mousedown(function(e){
+
+    var o = $(e.target).closest('tr').text();
+    var arr = o.split('\n');
+    var course = arr[2].trim();
+    console.log(course);
+    
+    var targetTable = document.getElementById('t_draggable2');
+
+    for (var c = 1; c < targetTable.rows.length; c++) {
+        crs = targetTable.rows.item(c).cells.item(1).textContent;
+
+        console.log(crs);
+        if (crs == course) {
+            alert('You have added that suject already.');
+            $('#t_draggable1').trigger('mouseup');
+        }
+    }
+})
+// Validate same course code Trisha Francisco
+
+
 // Validate Number of Units Trisha Francisco
 function validateUnits() {
   
@@ -142,8 +166,6 @@ function validateUnits() {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
     }
 
-
-
     document.getElementById('eform').onsubmit = function() {
         
         if (units > maxUnits) {
@@ -152,14 +174,8 @@ function validateUnits() {
             } else {
                 confirm("Are you sure with the schedule you selected?");
                 return true;
-
-
             }
-
-    
-
     }
-
 }
 // Validate Number of Units Trisha Francisco
 
@@ -172,4 +188,24 @@ $('#t_draggable2').dblclick(function(e){
     $('#t_draggable1 tr:first-child').after($(e.target).parent());
 
 })
+
+$('#t_draggable1').dblclick(function(e){
+
+    $(e.target).parent().remove(); // using jQuery
+
+
+    $('#t_draggable2 tr:first-child').after($(e.target).parent());
+
+})
 // Delete subject on double click Trisha Francisco
+
+// Select block Trisha Francisco
+      /*
+          var source = document.getElementById('tableA');
+          var destination = document.getElementById('tableB');
+          var copy = source.cloneNode(true);
+          copy.setAttribute('id', 'tableB');
+          destination.parentNode.replaceChild(copy, destination);
+      */
+
+// Select block Trisha Francisco
