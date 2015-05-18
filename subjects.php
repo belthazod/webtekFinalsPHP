@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body ondblclick = "displayUnits()">
 
   <?php include 'includes/nav.php';?> 
 
