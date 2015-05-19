@@ -22,6 +22,8 @@
 
     <title>Pre Enroll</title>
 
+   
+
 </head>
 
 <body ondblclick = "displayUnits()">
@@ -164,53 +166,44 @@
             <h3 class="panel-title"> Available Subjects</h3>
             
           </div>
-          <div class="panel-body">
+         <!--  <div class="panel-body">
             <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#t_draggable1" placeholder="Filter Available Subjects" />
-          </div>
+          </div> -->
           
-    <table class="tables_ui table table-hover" id="t_draggable1">
-      <tbody class="t_sortable">
+    <table class="tables_ui table table-hover" id="t_draggable1" data-toggle="bootgrid" data-ajax="true" data-url="subjectserver.php">
+    <thead>
+            <tr>
+                <th data-column-id="classcode" data-identifier="true">Classcode</th>
+                <th data-column-id="courseno">Course No.</th>
+        <th data-column-id="description">Descriptive Title</th>
+        <th data-column-id="time">Time</th>
+        <th data-column-id="days">Days</th>
+        <th data-column-id="room">Room</th>
+        <th data-column-id="units">Units</th>
+            </tr>
+    </thead>  
+</table>
 
-        <tr>
-          <th>Class Code</th>
-          <th>Course No.</th>
-          <th>Descriptive Title</th>
-          <th>Time</th>
-          <th>Days</th>
-          <th>Room</th>
-          <th>Units</th>
-        </tr>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  <!-- Include bootgrid plugin (below), -->
+  <script src="js/jquery.bootgrid.min.js"></script>
 
-        <?php 
-          try
-          {
-            $DB_con = new PDO("mysql:host={$servername};dbname={$dbname}",$username,$password);
-            $DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          }
-          catch(PDOException $exception)
-          {
-            echo $exception->getMessage();
-          }
+  <!-- now write the script specific for this grid -->
+    <script langauge="javascript">
+  //Refer to http://jquery-bootgrid.com/Documentation for methods, events and settings
 
-          include_once 'pagination.php';
-          $paginate = new paginate($DB_con);
+  //load gird on page\e load...
+  $("#grid-data").bootgrid(
+   {
+   caseSensitive:false
+   
+   });
 
-          $query = "SELECT classcode, courseno, description, time, days,room, units from class natural join course";       
-          $records_per_page=10;
-          $newquery = $paginate->paging($query,$records_per_page);
-          $paginate->dataview($newquery);  
-        ?>
+  </script>
 
-      </tbody>
-    </table>
-
-    <div class="panel-heading">
-            <h3 class="panel-title" align="center"> 
-                <?php
-                  $newquery =  $paginate->paginglink($query,$records_per_page);
-                ?>
-            </h3>
-    </div>
 
 <!-- Pagination 
         <div class="row text-center">

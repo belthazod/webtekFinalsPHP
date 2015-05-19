@@ -19,4 +19,7 @@
     <!-- Drag and Drop -->
     <script src="jq/jquery-2.1.4.min.js"></script>
     <script src="jq/jquery-ui.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/jquery.bootgrid.css" rel="stylesheet">
     
