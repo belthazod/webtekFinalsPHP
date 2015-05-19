@@ -188,21 +188,17 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-  <!-- Include bootgrid plugin (below), -->
-  <script src="js/jquery.bootgrid.min.js"></script>
+    <!-- Include bootgrid plugin (below), -->
+    <script src="js/jquery.bootgrid.min.js"></script>
 
-  <!-- now write the script specific for this grid -->
-    <script langauge="javascript">
-  //Refer to http://jquery-bootgrid.com/Documentation for methods, events and settings
+    <script language="javascript">
 
-  //load gird on page\e load...
-  $("#grid-data").bootgrid(
-   {
-   caseSensitive:false
-   
-   });
-
-  </script>
+    //load gird on page\e load...
+    $("#grid-data").bootgrid(
+    {
+      caseSensitive:false
+    });
+    </script>
 
 
 <!-- Pagination 
