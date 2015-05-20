@@ -185,7 +185,7 @@ $('#t_draggable2').dblclick(function(e){
     $(e.target).parent().remove(); // using jQuery
 
 
-    $('#t_draggable1 tr:first-child').after($(e.target).parent());
+    $('#t_draggable1 tbody tr:last-child').after($(e.target).parent());
 
 })
 
