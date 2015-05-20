@@ -200,12 +200,32 @@ $('#t_draggable1').dblclick(function(e){
 // Delete subject on double click Trisha Francisco
 
 // Select block Trisha Francisco
-      /*
-          var source = document.getElementById('tableA');
-          var destination = document.getElementById('tableB');
-          var copy = source.cloneNode(true);
-          copy.setAttribute('id', 'tableB');
-          destination.parentNode.replaceChild(copy, destination);
-      */
+function selectBlock() {     
+    var source = document.getElementById('blk');
+    var destination = document.getElementById('addSubj');
+    var copy = source.cloneNode(true);
 
+    while (destination.lastChild) {
+        destination.removeChild(destination.lastChild);
+    }
+
+    copy.id = 'addSubj';
+    copy.deleteRow(0);
+    console.log(copy.childElementCount);
+    var c = copy.children;
+    
+    for (var i = 0; i < c.length; i++) {  
+        var src = document.getElementById('blk');
+        var cpy = source.cloneNode(true);
+        cpy.id = 'addSubj';
+        cpy.deleteRow(0);
+        var d = cpy.children;
+
+        destination.appendChild(d[i]);
+    }
+
+   // $('#subjectsModal').modal('hide');
+
+   displayUnits();
+}
 // Select block Trisha Francisco

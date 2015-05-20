@@ -44,114 +44,124 @@
 
        <div class="col-md-12">
     
-      <div class="col-md-1">
-        <div class="block-chooser-item selected">
-          
-                
-            <span class="title">Block 1</span>
-            
-            <input type="radio" name="block" value="1" checked="checked">
-          
-          <div class="clear"></div>
-        </div>
-      </div>
       
-       <div class="col-md-1">
-        <div class="block-chooser-item">
-         
-                
-            <span class="title">Block 2</span>
-            
-            <input type="radio" name="block" value="2">
-         
-          <div class="clear"></div>
-        </div>
-      </div>
       
-       <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 3</span>
-            
-            <input type="radio" name="block" value="3">
-          
-          <div class="clear"></div>
-        </div>
-      </div>
 
-      <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 4</span>
-            
-            <input type="radio" name="block" value="4">
-          
-          <div class="clear"></div>
-        </div>
-      </div>
-      <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 5</span>
-            
-            <input type="radio" name="block" value="5">
-          
-          <div class="clear"></div>
-        </div>
-      </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#subjectsModal">
+  Choose Block Schedule
+</button>
 
-      <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 6</span>
-            
-            <input type="radio" name="block" value="6">
-          
-          <div class="clear"></div>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="subjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Block Schedule</h4>
       </div>
+      <div class="modal-body">
 
-      <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 7</span>
-            
-            <input type="radio" name="block" value="7">
-          
-          <div class="clear"></div>
-        </div>
+        
+        <div class="well">
+
+
+    <table id="blkTbl" class="tables_ui table table-hover"  onmouseover="displayUnits(event)">
+      <tbody id="blk" class="t_sortable">
+
+        <tr>
+          <th>Class Code</th>
+          <th>Course Number</th>
+          <th>Descriptive Title</th>
+          <th>Time</th>
+          <th>Days</th>
+          <th>Room</th>
+          <th>Units</th>     
+        </tr>
+
+        <tr>
+          <td>9570</td>
+          <td>IT 324L</td>
+          <td>Web Systems and Technologies</td>
+          <td>1:00-2:30</td>
+          <td>WS</td>
+          <td>S326</td>
+          <td>1</td>
+        </tr>
+
+
+        <tr>
+          <td>9569</td>
+          <td>IT 324</td>
+          <td>Web Systems and Technologies</td>
+          <td>10:30-11:30</td>
+          <td>MTH</td>
+          <td>S423</td>
+          <td>2</td>
+        </tr>
+
+
+        <tr>
+          <td>9571</td>
+          <td>IT 323L</td>
+          <td>Integrative Programming</td>
+          <td>1:00-2:30</td>
+          <td>MTH</td>
+          <td>S326</td>
+          <td>1</td>
+        </tr>
+
+
+        <tr>
+          <td>9572</td>
+          <td>IT 323</td>
+          <td>Integrative Programming</td>
+          <td>1:00-2:00</td>
+          <td>TF</td>
+          <td>S423</td>
+          <td>2</td>
+        </tr>
+
+
+        <tr>
+          <td>9558</td>
+          <td>IT 423</td>
+          <td>Information Systems Planning </td>
+          <td>9:30-10:30</td>
+          <td>MWF</td>
+          <td>S526</td>
+          <td>3</td>
+        </tr>
+
+
+
+        <tr>
+          <td>9523</td>
+          <td>IT 002</td>
+          <td>Information Technology Certification and Review</td>
+          <td>11:30-12:30</td>
+          <td>MWF</td>
+          <td>S425</td>
+          <td>3</td>
+        </tr>
+      
+      </tbody>
+    </table>
+</div>
       </div>
-
-      <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 8</span>
-            
-            <input type="radio" name="block" value="8">
-          
-          <div class="clear"></div>
-        </div>
-      </div>
-
-      <div class="col-md-1">
-        <div class="block-chooser-item">
-          
-               
-            <span class="title">Block 9</span>
-            
-            <input type="radio" name="block" value="9">
-          
-          <div class="clear"></div>
-        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Previous</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Next</button>
+        <button id="chooseBlock" onclick="selectBlock()" type="button" class="btn btn-primary">Choose Block</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-      
+  </div>
+</div>
+
+
+
+
     </div>
    
     <div class="col-md-6">
@@ -201,7 +211,7 @@
         </div>
       
         <table class="tables_ui table table-hover" id="t_draggable2" onmouseover="displayUnits(event)">
-          <tbody class="t_sortable">
+          <tbody tbody id="addSubj" class="t_sortable">
             <tr>
               <th>Class Code</th>
               <th>Course Number</th>
