@@ -86,7 +86,7 @@ $(document).ready(function() {
   var $tabs = $('#t_draggable1')
   $("tbody.t_sortable").sortable({
     connectWith: ".t_sortable",
-    items: "> tr:not(:first)",
+    items: "> tr",
     appendTo: $tabs,
     helper:"clone",
     zIndex: 999990
