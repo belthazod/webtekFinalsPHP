@@ -86,7 +86,7 @@ $(document).ready(function() {
   var $tabs = $('#t_draggable1')
   $("tbody.t_sortable").sortable({
     connectWith: ".t_sortable",
-    items: "> tr",
+    items: "> tr:not(:first)",
     appendTo: $tabs,
     helper:"clone",
     zIndex: 999990
@@ -133,8 +133,8 @@ function displayUnits(event) {
 
 // Validate same course code Trisha Francisco
 $('#t_draggable1').mousedown(function(e){
-
-    var o = $(e.target).closest('tr').text();
+    
+    var o = $(e.target).closest('tr');
     var arr = o.split('\n');
     var course = arr[2].trim();
     console.log(course);
@@ -201,6 +201,7 @@ $('#t_draggable1').dblclick(function(e){
 
 // Select block Trisha Francisco
 function selectBlock() {     
+    var tbl2 = document.getElementById('t_draggable2');
     var source = document.getElementById('blk');
     var destination = document.getElementById('addSubj');
     var copy = source.cloneNode(true);
@@ -210,7 +211,7 @@ function selectBlock() {
     }
 
     copy.id = 'addSubj';
-    copy.deleteRow(0);
+    // copy.deleteRow(0);
     console.log(copy.childElementCount);
     var c = copy.children;
     
@@ -218,7 +219,7 @@ function selectBlock() {
         var src = document.getElementById('blk');
         var cpy = source.cloneNode(true);
         cpy.id = 'addSubj';
-        cpy.deleteRow(0);
+        // cpy.deleteRow(0);
         var d = cpy.children;
 
         destination.appendChild(d[i]);
