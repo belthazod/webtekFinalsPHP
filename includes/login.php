@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
     	
         if($row["idno"] == $_POST["idno"] && $row["password"] == $_POST["password"]){
         	// Set session variables
-        $_SESSION["image"] = $row["iamge"];
+        $_SESSION["image"] = $row["image"];
 		$_SESSION["idno"] = $row["idno"];
 		$_SESSION["password"] =  $row["password"];
         $_SESSION["firstname"] =  $row["firstname"];
