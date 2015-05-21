@@ -214,9 +214,9 @@ CREATE TABLE `enrollmentdetails` (
   PRIMARY KEY (`enrolid`,`classcode`),
   KEY `fk_ed_classcode_idx` (`classcode`),
   KEY `fk_ed_semester_idx` (`semester_id`),
-  CONSTRAINT `fk_ed_semester` FOREIGN KEY (`semester_id`) REFERENCES `semester` (`semester_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_ed_classcode` FOREIGN KEY (`classcode`) REFERENCES `class` (`classcode`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ed_enrolid` FOREIGN KEY (`enrolid`) REFERENCES `enrollment` (`enrolid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_ed_enrolid` FOREIGN KEY (`enrolid`) REFERENCES `enrollment` (`enrolid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ed_semester` FOREIGN KEY (`semester_id`) REFERENCES `semester` (`semester_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -476,4 +476,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-21  1:46:38
+-- Dump completed on 2015-05-21 21:35:59
