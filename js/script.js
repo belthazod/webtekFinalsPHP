@@ -165,11 +165,13 @@ function validateUnits() {
     for (var c = 1; c < targetTable.rows.length; c++) {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
     }
-
+ 
     document.getElementById('eform').onsubmit = function() {
-        
         if (units > maxUnits) {
                 alert("You have exceeded the maximum allowed number of units.");
+                return false;
+            } else if (units == 0){
+                alert("You have not selected any subject to pre-enroll. Please choose from the list of available subjects.");
                 return false;
             } else {
                 confirm("Are you sure with the schedule you selected?");
