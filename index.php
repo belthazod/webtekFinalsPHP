@@ -50,7 +50,7 @@
 
     <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-offset-4 col-md-4">
             <div class="pr-wrap">
                 <div class="pass-reset">
                     <label>
@@ -73,7 +73,7 @@
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" />
-                                    Remember Me
+                                    <p class = "remember">Remember Me</p>
                                 </label>
                             </div>
                         </div>
@@ -84,6 +84,26 @@
         </div>
     </div>
 </div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>Welcome back.</h4>
+            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" />
+            </br>
+            <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">     
+                <a href="#" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a>
+            </span>
+            </div>
+            </div>
+</div>
+</div>
+</div>
+-->
     <!-- jQuery -->
     <script>
  $(document).ready(function () {
