@@ -21,13 +21,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">About
-                    <small>Subheading</small>
+                   
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="home.html">Home</a>
-                    </li>
-                    <li class="active">About</li>
-                </ol>
+                
             </div>
         </div>
         <!-- /.row -->
@@ -43,11 +39,37 @@
                 <p>Around two hundred fifty kilometers north of Manila lies Baguio City, known to be the "Summer Capital of the Philippines" that enjoys temperate climate all year round. From a village resort established by the Americans, Baguio has become the Northern Philippines' center of business and commerce as well as the center of education. Saint Louis University has played a pivotal role in the evolution of the City into a center for learning in the North.</p>
                 <p>Today, SLU is the largest university north of Manila with more than 30,000 students from the elementary, high school and college levels. Its reputation for excellence attracts students and scholars not only from the Philippines but from other countries as well. It has sustained itself since 1911 to become one of the top centers of academic excellence in the Philippines that meet international standards in tertiary education.</p>
 
-                <h2>Vision and Mission</h2>
-                <p>"We envision Saint Louis University as an excellent missionary and transformative educational institution zealous in developing human resources imbued with the Christian Spirit and who are creative, competent and socially involved."</p>
+            </div>
+        </div>       
 
-                <h2>Institutional Awards</h2>
-                <ul>
+        <hr>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="vision">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <h4> Vision and Mission </h4>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+         <p>"We envision Saint Louis University as an excellent missionary and transformative educational institution zealous in developing human resources imbued with the Christian Spirit and who are creative, competent and socially involved."</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="awards">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h4>Institutional Awards</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+       <ul>
                     <li>Full Autonomy Status granted by the Commission on Higher Education (CHED)</li>
                     <li>CHED Center of Excellence and Development</li>
                     <li>Recognized as a top performing school in various licensure examinations by the Professional Regulation Commission (PRC)</li>
@@ -62,8 +84,39 @@
                     <li>SLU-EISSIF: Presidential Citation for "Best Practices in Improving Productivity and Efficiency"</li>
                 </ul>
 
-                <h2>Schools</h2>
-                <ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="campuses">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <h4> Campuses </h4>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="campuses">
+      <div class="panel-body">
+        <ul>
+                    <li>Main Campus, Bonifacio St, Baguio City - housing the Schools of Computing and Information Sciences, Engineering and Architecture, Humanities, Law, Medicine, Natural Sciences and Nursing and the SLU Hospital of the Sacred Heart</li>
+                    <li>Saint Aloysius de Gonzaga Campus, General Luna Road, Baguio City - housing the SLU Laboratory Elementary School</li>
+                    <li>Navy Base Campus, Claro M Recto Street, Navy Road, Baguio City - housing the School of Teacher Education and SLU Laboratory High School</li>
+                    <li>Maryheights Campus, Bakakeng, Baguio City - School of Accountancy and Business Management</li>
+      </div>
+    </div>
+  </div>
+   <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="schools">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          <h3>Schools</h3>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="campuses">
+      <div class="panel-body">
+        <ul>
+                     
                     <li>Saint Louis University Laboratory Elementary School (SLU-LES)</li>
                     <li>Saint Louis University Laboratory High School (SLU-LHS)</li>
                     <li>School of Accountancy and Business Management (SABM) - CHED Center of Development for Accountancy and Entrepreneurship Education</li>
@@ -76,16 +129,13 @@
                     <li>School of Nursing (SoN) - CHED Center of Development for Nursing Education</li>
                     <li>School of Teacher Education (STE)CHED Center of Excellence for Teacher Education</li>
                 </ul>
-                <h2>Campuses</h2>
-                <ul>
-                    <li>Main Campus, Bonifacio St, Baguio City - housing the Schools of Computing and Information Sciences, Engineering and Architecture, Humanities, Law, Medicine, Natural Sciences and Nursing and the SLU Hospital of the Sacred Heart</li>
-                    <li>Saint Aloysius de Gonzaga Campus, General Luna Road, Baguio City - housing the SLU Laboratory Elementary School</li>
-                    <li>Navy Base Campus, Claro M Recto Street, Navy Road, Baguio City - housing the School of Teacher Education and SLU Laboratory High School</li>
-                    <li>Maryheights Campus, Bakakeng, Baguio City - School of Accountancy and Business Management</li>
-            </div>
-        </div>       
+      </div>
+    </div>
+  </div>
+</div>
 
-        <hr>
+ 
+        </div>
 
         <!-- Footer -->
         <footer>
