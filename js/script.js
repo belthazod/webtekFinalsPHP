@@ -66,7 +66,7 @@ $(document).ready(function () {
 
 $(function(){
     // attach table filter plugin to inputs
-  $('[data-action="filter"]').filterTable();
+  //$('[data-action="filter"]').filterTable();
   
   $('.container').on('click', '.panel-heading span.filter', function(e){
     var $this = $(this), 
@@ -169,8 +169,8 @@ function validateUnits() {
                 alert("You have not selected any subject to pre-enroll. Please choose from the list of available subjects.");
                 return false;
             } else {
-                confirm("Are you sure with the schedule you selected?");
-                return true;
+                var result = confirm("Are you sure with the schedule you selected?");
+                return result;
             }
     }
 }
@@ -223,3 +223,4 @@ function selectBlock() {
    displayUnits();
 }
 // Select block Trisha Francisco
+

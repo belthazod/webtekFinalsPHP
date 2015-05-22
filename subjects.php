@@ -18,7 +18,11 @@
       var year = '<?php echo $resultRow['year'] ?>';
       var maxUnits = '<?php echo $resultRow['maxunits'] ?>'; 
     </script>
-
+    <style>
+      .hidden{
+        display:none;
+      }
+    </style>
     <title>Pre Enroll</title>
 </head>
 
@@ -50,7 +54,7 @@
             <div class="modal-body">
               <div class="well">
                 <table id="blkTbl" class="tables_ui table table-hover"  onmouseover="displayUnits(event)">
-                  <tbody id="blk" class="t_sortable">
+                  <thead id="blk" class="t_sortable">
 
                     <tr>
                       <th>Class Code</th>
@@ -61,8 +65,41 @@
                       <th>Room</th>
                       <th>Units</th>     
                     </tr>
+                </thead>
+<?php
+$numberOfBlocks = 0;
+ $sql = "SELECT Distinct(blockno) FROM class Where year = ". $resultRow['year'] ." Order by 1 Desc Limit 1"; 
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                $numberOfBlocks = $row["blockno"];
+              }
+        }
+for($block = 1;  $block <= $numberOfBlocks ; $block++){
+  echo '<tbody>';
+ $sql = "SELECT classcode, courseno, description, time, days,room, units from class natural join course WHERE blockno = ".$block." AND year = ". $resultRow['year'] ; 
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                
+              echo '<tr>
+                      <td>' . $row["classcode"] . '</td>
+                      <td>' . $row["courseno"] . '</td>
+                      <td>' . $row["description"] . '</td>
+                      <td>' . $row["time"] . '</td>
+                      <td>' . $row["days"] . '</td>
+                      <td>' . $row["room"] . '</td>
+                      <td>' . $row["units"] . '</td>
+                  </tr>';
+                }
+              }
+        echo '</tbody>';
+        }
 
-                    <tr>
+?>
+                   <!-- <tr>
                       <td>9570</td>
                       <td>IT 324L</td>
                       <td>Web Systems and Technologies</td>
@@ -126,9 +163,11 @@
                       <td>MWF</td>
                       <td>S425</td>
                       <td>3</td>
-                    </tr>
+                    </tr>-->
                   
-                  </tbody>
+                <tfoot class="center-text" id='currentBlock'>
+                
+                </tfoot>
                 </table>
               </div>
             </div>
@@ -140,7 +179,8 @@
   </ul>
 </nav>
             <div class="modal-footer">
-             
+              <button type="button" class="btn btn-default" onclick ="previousBlock()" >Previous</button>
+              <button type="button" class="btn btn-default" onclick="nextBlock()" >Next</button>
               <button id="chooseBlock" onclick="selectBlock()" type="button" class="btn btn-primary">Choose Block</button>
               
             </div>
@@ -204,7 +244,7 @@
       </table>
     </div>
 
-  
+    
     
     <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
     <div class="col-md-10"> </div>
@@ -233,7 +273,32 @@
 
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.bootgrid.min.js"></script>
-
+  <script>
+    var tbody =document.getElementById('blkTbl');
+    var rows = tbody.getElementsByTagName('tbody');
+    var blockno = 0;
+    showActiveBlock();
+    function nextBlock(){
+      if(blockno<rows.length-1)
+        blockno++;
+      showActiveBlock();
+    }
+    function previousBlock(){
+      if(blockno>0)
+      blockno--;
+      showActiveBlock();
+    }
+    function showActiveBlock(){
+      for(var x = 0; x<rows.length; x++){
+      if(x!= blockno){
+        rows[x].className = 'hidden';
+      }else{
+        rows[x].className = '';
+        document.getElementById('currentBlock').innerHTML = "Block : " + (blockno+1);
+      }
+    }
+    }
+  </script>
 </body>
 
 </html>
