@@ -132,18 +132,24 @@
                 </table>
               </div>
             </div>
+
+            <nav>
+  <ul class="pager">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</nav>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Previous</button>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Next</button>
+             
               <button id="chooseBlock" onclick="selectBlock()" type="button" class="btn btn-primary">Choose Block</button>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
 
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h3 class="panel-title"> Available Subjects</h3>
@@ -155,11 +161,14 @@
             <tr>
               <th data-column-id="classcode" data-identifier="true">Classcode</th>
               <th data-column-id="courseno">Course No.</th>
-              <th data-column-id="description">Descriptive Title</th>
+              <th style="width:40%" data-column-id="description">Descriptive Title</th>
               <th data-column-id="time">Time</th>
               <th data-column-id="days">Days</th>
               <th data-column-id="room">Room</th>
               <th data-column-id="units">Units</th>
+              <th data-column-id="units">Slots</th>
+              <th data-column-id="units">Reserved</th>
+              <th data-column-id="units">Status</th>
             </tr>
           </thead>  
         </tbody>
@@ -168,7 +177,7 @@
     </div>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title"> Added Subjects</h3>
@@ -187,10 +196,15 @@
             <th>Days</th>
             <th>Room</th>
             <th>Units</th>
+            <th class="none">Units</th>
+            <th class="none">Units</th>
+            <th class="none">Units</th>
           </tr>
         </tbody>
       </table>
     </div>
+
+  
     
     <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
     <div class="col-md-10"> </div>

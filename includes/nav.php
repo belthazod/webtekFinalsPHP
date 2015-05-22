@@ -50,8 +50,29 @@
                     <li>
                         <a href="contact.php">Contact Us</a>
                     </li>
-                    <ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Profile  <span class="badge">1</span>
+
+                    <ul class="nav navbar-nav">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" > <span class="badge">1</span>
+                                        </b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <p> SAMPLE NOTIF </p>
+
+
+                                            </li>
+                                    
+                                        </ul>
+
+
+                                    </li>
+                                </ul>
+
+                     
+                                    
+
+                                
+                    <ul class="nav navbar-nav navbar-right ">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" ><span class="label label label-info">Profile</span> 
                                         <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li>
@@ -75,8 +96,10 @@
                                                                <?php echo $_SESSION['idno']?></p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm active">View Profile</a>
-                                                            <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm active">View Schedule</a>
+
+
+                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="label label label-info">View Profile</a>   <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="label label label-info">View Schedule</a>                                                        
+                                                          
                                                         </div>
                                                     </div>
                                                 </div>
@@ -94,10 +117,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+
                                             </li>
+                                    
                                         </ul>
+
+
                                     </li>
                                 </ul>
+
+                              
 
                     
                     

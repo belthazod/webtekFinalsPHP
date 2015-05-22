@@ -86,6 +86,8 @@ footer {
   margin-top: 20px;
 }
 
+ul.navbar-nav a:active { background: #fff; }
+
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper .container {
   padding-left: 0;
@@ -202,4 +204,11 @@ div.block-chooser{
     }
     /*Number of units Trisha Francisco*/
 
+/* danica subjects added */
+.none {
+
+  display:none;
+}
+
+ nav ul.navbar-nav a:hover { border-color: #f14444; }
     
