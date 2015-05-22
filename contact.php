@@ -22,14 +22,10 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Contact
-                    <small>Subheading</small>
+                <h1 class="page-header">Contact Us
+                    
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="home.html">Home</a>
-                    </li>
-                    <li class="active">Contact</li>
-                </ol>
+               
             </div>
         </div>
         <!-- /.row -->
@@ -40,7 +36,9 @@
         <!-- Content Row -->
         <div class="row">
             <!-- Map Column -->
-            <div class="col-md-12">
+            <div class="col-md-8">
+                <h3> Saint Louis University Location </h3>
+                <hr>
                 
 				<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<div style="overflow:hidden;height:400px;width:100%;">
@@ -65,31 +63,24 @@
 	</script>
             </div>
             <!-- Contact Details Column -->
-           
-        </div>
-        <!-- /.row -->
-
-        <!-- Contact Form -->
-        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-			
-			 <div class="col-md-4">
+           <div class="col-md-4">
                 <h3>Contact Details</h3>
-				<hr>
+                <hr>
                 <p>
                    A. Bonifacio Street
-					<br>Baguio City, Philippines 2600<br>
+                    <br>Baguio City, Philippines 2600<br>
                 </p>
               
-				<p>
-					Trunk Lines: (063) (74) 442 2794, 442 2193, 443 3043, 443 2001, 444  8246 to 48, 444 8253<br>
-					Fax Number: (063) (74) 442 2842<br><br><hr>
-					Registrar's Office<br>
-					Local:  213, 382, 299, 229<br>
-					Email: sluregis.slu.edu.ph<br><br><hr>
-					Student Affairs Office (Admission)<br>
-					Local: 321, 237, 230<br>
-					Email:  saosec@slu.edu.ph<br>
-				</p>
+                <p>
+                    Trunk Lines: (063) (74) 442 2794, 442 2193, 443 3043, 443 2001, 444  8246 to 48, 444 8253<br>
+                    Fax Number: (063) (74) 442 2842<br><br><hr>
+                    Registrar's Office<br>
+                    Local:  213, 382, 299, 229<br>
+                    Email: sluregis.slu.edu.ph<br><br><hr>
+                    Student Affairs Office (Admission)<br>
+                    Local: 321, 237, 230<br>
+                    Email:  saosec@slu.edu.ph<br>
+                </p>
                <hr>
                   
                 <ul class="list-unstyled list-inline list-social-icons">
@@ -109,6 +100,13 @@
             </div>
 
         </div>
+
+        </div>
+        <!-- /.row -->
+
+     
+       
+			 
         <!-- /.row -->
 
         <hr>
