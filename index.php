@@ -38,6 +38,7 @@
                          ?>
 <link href="css/bootstraplogin.css" rel="stylesheet">
 
+
     <title>Pre Enroll</title>
 
 </head>
@@ -96,6 +97,9 @@
 });
 
     </script>
+
+
+    
 
 </body>
 

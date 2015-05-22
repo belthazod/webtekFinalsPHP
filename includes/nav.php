@@ -5,6 +5,7 @@
 <head>
     <?php
      include 'includes/dbconnection.php';
+    include 'includes/headerelements.php';
  
 
   if(!isset($_SESSION["idno"])){

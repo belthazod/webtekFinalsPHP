@@ -12,9 +12,12 @@
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
     
+    <link href="../css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+     <script src="jq/script.js"></script>
 
     <!-- Drag and Drop -->
     <script src="jq/jquery-2.1.4.min.js"></script>
