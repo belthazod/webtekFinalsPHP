@@ -51,7 +51,7 @@
                         <a href="contact.php">Contact Us</a>
                     </li>
                     <ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Profile
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Profile  <span class="badge">1</span>
                                         <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li>
