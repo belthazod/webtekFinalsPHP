@@ -164,17 +164,7 @@
           </thead>  
         </tbody>
       </table>
-
-      <!-- Drag and Drop -->
-      <script src="jq/jquery-2.1.4.min.js"></script>
-      <script src="jq/jquery-ui.min.js"></script>
-
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.bootgrid.min.js"></script>
-
-      <script language="javascript">
-        $("#grid-data").bootgrid({caseSensitive:false});
-      </script>
+      
     </div>
   </div>
 
@@ -222,6 +212,13 @@
 
   <!-- script.js -->
   <script src="js/script.js"></script>
+
+  <!-- Drag and Drop -->
+  <script src="jq/jquery-2.1.4.min.js"></script>
+  <script src="jq/jquery-ui.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.bootgrid.min.js"></script>
 
 </body>
 
