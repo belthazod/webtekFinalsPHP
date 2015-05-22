@@ -29,6 +29,12 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
+                <div class="fill" style="background-image:url('imgs/slu.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Saint Louis University</h2>
+                </div>
+            </div>
+            <div class="item">
                 <div class="fill" style="background-image:url('imgs/maryheights.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Maryheights Campus</h2>
@@ -38,12 +44,6 @@
                 <div class="fill" style="background-image:url('imgs/main.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Main Campus</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('imgs/mensdorm.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
                 </div>
             </div>
         </div>
