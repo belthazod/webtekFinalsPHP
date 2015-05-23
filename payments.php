@@ -11,13 +11,11 @@
 
 </head>
 
-<body>
+<body onload=display_ct();>
 
       <?php include 'includes/nav.php';?> 
 
 </head>
-
-<body>
 
    
         </div>
@@ -47,8 +45,23 @@
 
       <form class="form-horizontal" role="form">
           <!-- Form Name -->
-            <p>Date Enrolled : month-day-yyyy
-            <p>Schedule valid until month-day-yyyy
+            <p>Date Enrolled :<span id='ct' ></span><script> 
+                function display_c(){
+                var refresh=1000; // Refresh rate in milli seconds
+                mytime=setTimeout('display_ct()',refresh)
+            }
+
+            function display_ct() {
+                var strcount
+                var x = new Date()
+                var x1=" " + x.getMonth() + "/" + x.getDate() + "/" + x.getYear(); 
+                x1 = x1 + " - " + x.getHours( )+ ":" + x.getMinutes() + ":" + x.getSeconds();
+                document.getElementById('ct').innerHTML = x1;
+
+                tt=display_c();
+                }
+            </script>
+            <p><b>Schedule valid for two business days.</b>
  
     <h4><a data-toggle="modal" data-target="#myModal">Schedule</a></h4>
         
