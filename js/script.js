@@ -123,7 +123,6 @@ function displayUnits(event) {
     var targetTable2 = document.getElementById('t_draggable1');
     var units = 0;
 
-    alert(targetTable2.rows.item(c).cells.item(9).textContent);
     for (var c = 1; c < targetTable.rows.length; c++) {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
         targetTable.rows.item(c).cells.item(7).className="none";
