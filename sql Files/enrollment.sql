@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
+CREATE DATABASE  IF NOT EXISTS `enrollment` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `enrollment`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
 --
 -- Host: 127.0.0.1    Database: enrollment
 -- ------------------------------------------------------
--- Server version	5.6.17
+-- Server version	5.5.24-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +16,31 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `announcement`
+--
+
+DROP TABLE IF EXISTS `announcement`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `announcement` (
+  `announcement_id` int(11) NOT NULL,
+  `Title` varchar(500) DEFAULT NULL,
+  `Content` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`announcement_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `announcement`
+--
+
+LOCK TABLES `announcement` WRITE;
+/*!40000 ALTER TABLE `announcement` DISABLE KEYS */;
+INSERT INTO `announcement` VALUES (0,'2nd Place, John Alvin O. Reyes ',NULL),(1,'Congratulation to ARCH. LORD BYRON F. GONZALES','Gonzales, Lord Byron F. & Romero, Robert V. (2014) Cluster Housing Concept: A Sustainable Site Design Approach of the Residential Subdivision in the Municipality of Tuba, Philippines. Journal Settlements and Spatial Planning.'),(2,'Congratulation to MARK JOB G. BASCOS','Bascos, Mark Job G. (2014) A Concept Analysis of Mentoring. Philippine Journal of Nursing.'),(3,'Congratulation to LOTA O. FLORENTINO','Florentino, Lota O. (2014). Integrating Local Literature in Teaching English to First Graders under K-12 Curiculum. Theory and Practice in Langugage Studies'),(4,'SLU President is 2014 Baguio City Outstanding Citizen Awardee','SLU president Fr. Jessie M. Hechanova, CICM, received  the 2014 Baguio City Outstanding Citizen Award in the field of education by the City Government of Baguio at ceremonies held in the Baguio Convention Center on 1 September  2014, during the 105th Baguio Charter Day celebration.'),(5,'Congratulations to the successfull examinees in the Medical Technologist Licensure Examination given in March 2015.',NULL);
+/*!40000 ALTER TABLE `announcement` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `class`
@@ -477,4 +504,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-22 23:02:07
+-- Dump completed on 2015-05-23 14:25:35
