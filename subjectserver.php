@@ -1,13 +1,10 @@
 <?php
 // Regula Jane S. - - - - -
 
-  $host = "localhost";
-  $user = "root";
-  $pass = "";
-  $dbname = "enrollment";
-
   try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    include 'includes/dbconnection.php';
+
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $where =" 1=1 ";
