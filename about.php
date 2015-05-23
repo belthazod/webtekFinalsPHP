@@ -32,40 +32,52 @@
         <div class="row">
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
             </div>
             <div class="col-md-6">
-                <h2>About SLU</h2>
-                <p>Saint Louis University is regarded as one of the Philippines' respected and leading educational institutions that has grown with the demands of the current and future environments for its students and faculty alike.</p>
-                <p>Around two hundred fifty kilometers north of Manila lies Baguio City, known to be the "Summer Capital of the Philippines" that enjoys temperate climate all year round. From a village resort established by the Americans, Baguio has become the Northern Philippines' center of business and commerce as well as the center of education. Saint Louis University has played a pivotal role in the evolution of the City into a center for learning in the North.</p>
-                <p>Today, SLU is the largest university north of Manila with more than 30,000 students from the elementary, high school and college levels. Its reputation for excellence attracts students and scholars not only from the Philippines but from other countries as well. It has sustained itself since 1911 to become one of the top centers of academic excellence in the Philippines that meet international standards in tertiary education.</p>
+                
+                
 
-            </div>
-        </div>       
 
-        <hr>
-
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="vision">
-      <h4 class="panel-title">
+                   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-info">
+    <div class="panel-heading" role="tab" id="about">
+      <h6 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         <h4> Vision and Mission </h4>
+         <h6> About SLU </h6>
         </a>
-      </h4>
+      </h6>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-         <p>"We envision Saint Louis University as an excellent missionary and transformative educational institution zealous in developing human resources imbued with the Christian Spirit and who are creative, competent and socially involved."</p>
+         <p>Saint Louis University is regarded as one of the Philippines' respected and leading educational institutions that has grown with the demands of the current and future environments for its students and faculty alike.</p>
+                <p>Around two hundred fifty kilometers north of Manila lies Baguio City, known to be the "Summer Capital of the Philippines" that enjoys temperate climate all year round. From a village resort established by the Americans, Baguio has become the Northern Philippines' center of business and commerce as well as the center of education. Saint Louis University has played a pivotal role in the evolution of the City into a center for learning in the North.</p>
+                <p>Today, SLU is the largest university north of Manila with more than 30,000 students from the elementary, high school and college levels. Its reputation for excellence attracts students and scholars not only from the Philippines but from other countries as well. It has sustained itself since 1911 to become one of the top centers of academic excellence in the Philippines that meet international standards in tertiary education.</p>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="awards">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <h4>Institutional Awards</h4>
+
+    <div class="panel panel-info">
+    <div class="panel-heading" role="tab" id="vision">
+      <h6 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+            <h6>Vision and Mission</h6>
         </a>
-      </h4>
+      </h6>
+    </div>
+    <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
+      <div class="panel-body">
+       <p>"We envision Saint Louis University as an excellent missionary and transformative educational institution zealous in developing human resources imbued with the Christian Spirit and who are creative, competent and socially involved."</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading" role="tab" id="awards">
+      <h6 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h6>Institutional Awards</h6>
+        </a>
+      </h6>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
@@ -87,13 +99,13 @@
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="campuses">
-      <h4 class="panel-title">
+      <h6 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <h4> Campuses </h4>
+          <h6> Campuses </h6>
         </a>
-      </h4>
+      </h6>
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="campuses">
       <div class="panel-body">
@@ -105,13 +117,13 @@
       </div>
     </div>
   </div>
-   <div class="panel panel-default">
+   <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="schools">
-      <h4 class="panel-title">
+      <h6 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-          <h3>Schools</h3>
+          <h6>Schools</h6>
         </a>
-      </h4>
+      </h6>
     </div>
     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="campuses">
       <div class="panel-body">
@@ -134,6 +146,12 @@
   </div>
 </div>
 
+            </div>
+        </div>       
+
+        <hr>
+
+     
  
         </div>
 

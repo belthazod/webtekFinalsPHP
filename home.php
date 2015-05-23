@@ -68,35 +68,35 @@
                 </h1>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4><i class="fa fa-fw fa-flag"></i> Announcement 1</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-default">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4><i class="fa fa-fw fa-flag"></i> Announcement 2</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-default">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4><i class="fa fa-fw fa-flag"></i> Announcement 3</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-default">Read More</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
                 </div>
                 <div class="col-md-4">
-                    <a href="subjects.php" class="btn btn-lg btn-default btn-block" href="#">Enroll now</a>
+                    <a href="subjects.php" class="btn btn-lg btn-primary btn-block" href="#">Enroll now</a>
                 </div>
             </div>
         </div>

@@ -37,7 +37,12 @@
   
   <br>
 
-    <div class="col-md-12">
+   <div class="col-md-5">
+
+     <!-- <button type="button" class="btn btn-primary btn-lg" > a</button> -->
+   </div>
+
+    <div class="col-md-9">
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#subjectsModal">
         Choose Block Schedule
@@ -218,7 +223,7 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
   </div>
 
   <div class="col-md-12">
-    <div class="panel panel-success">
+    <div class="panel panel-primary">
       <div class="panel-heading">
         <h3 class="panel-title"> Added Subjects</h3>
       </div>
@@ -247,9 +252,9 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
     
     
     <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
-    <div class="col-md-10"> </div>
+    <div class="col-md-11"> </div>
     <form id="eform" onsubmit="return isValidForm()" action="payments.php" method="post">
-    <div class="col-md-2">
+    <div class="col-md-1">
       <button type="submit" class="btn btn-primary" onclick="validateUnits()">Pre-Enroll</button>
     </div>
   </div>
