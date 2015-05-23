@@ -55,12 +55,34 @@
                                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" > <span class="badge">1</span>
                                         </b></a>
                                         <ul class="dropdown-menu">
-                                            <li>
-                                                <p> SAMPLE NOTIF </p>
+                                        <div class="navbar-content">
 
+                                            <li>
+                                                <div class="alert alert-success alert-dismissable">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                    <strong>Well done!</strong> You successfully read this important alert message.
+                                                </div>
 
                                             </li>
-                                    
+
+                                             <li>
+                                            <div class="alert alert-info">
+                                                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="alert alert-warning alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="alert alert-danger alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                                            </div>
+                                            </li>
+                                        </div>
                                         </ul>
 
 
