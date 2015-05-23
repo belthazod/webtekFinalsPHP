@@ -120,10 +120,22 @@ function displayUnits(event) {
     p.innerHTML = "";
 
     var targetTable = document.getElementById('t_draggable2');
+    var targetTable2 = document.getElementById('t_draggable1');
     var units = 0;
 
+    alert(targetTable2.rows.item(c).cells.item(9).textContent);
     for (var c = 1; c < targetTable.rows.length; c++) {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
+        targetTable.rows.item(c).cells.item(7).className="none";
+        targetTable.rows.item(c).cells.item(8).className="none";
+        targetTable.rows.item(c).cells.item(9).className="none";
+
+    }
+
+    for (var d = 1; d < targetTable2.rows.length; d++) {
+        targetTable2.rows.item(d).cells.item(7).className="text-left";
+        targetTable2.rows.item(d).cells.item(8).className="text-left";
+        targetTable2.rows.item(d).cells.item(9).className="text-left";
     }
 
     p.innerHTML = units;
