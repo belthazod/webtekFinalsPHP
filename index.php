@@ -40,6 +40,9 @@
 
 
     <title>Pre Enroll</title>
+     <script src="js/script.js"></script>
+    
+
 
 </head>
 
@@ -48,7 +51,9 @@
 
 <body>
 
-    <div class="container">
+
+
+    <div class="container animated fadeInUp">
     <div class="row">
         <div class="col-md-offset-4 col-md-4">
             
@@ -59,7 +64,7 @@
              
                 <input type="text" placeholder="ID Number" name="idno" />
                 <input type="password" placeholder="Password" name = "password"/>
-                <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
+                <input type="submit" value="Sign In" class="btn btn-primary btn-sm" />
                 <div class="remember-forgot">
                     <div class="row">
                         <div class="col-md-6">

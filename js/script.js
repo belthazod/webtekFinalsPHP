@@ -235,3 +235,7 @@ function selectBlock() {
 }
 // Select block Trisha Francisco
 
+/* Danica Rose Desembrana parallax*/
+
+
+
