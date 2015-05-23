@@ -34,6 +34,18 @@ p.form-title
     font-size: 20px;
     font-weight: 600;
     text-align: center;
+    color: black;
+    margin-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+p.sign
+{
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
     color: #4D4D4D;
     margin-top: 5%;
     text-transform: uppercase;

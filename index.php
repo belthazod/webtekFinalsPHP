@@ -58,7 +58,10 @@
         <div class="col-md-offset-4 col-md-4">
             
             <div class="wrap">
-                <p href="home.html" class="form-title">
+                <p class="form-title">
+                    SLU ONLINE ENROLLMENT <p>
+                    <hr>
+                    <p class="sign">
                     Sign In</p>
                 <form class="login" action="includes/login.php" method="POST">
              

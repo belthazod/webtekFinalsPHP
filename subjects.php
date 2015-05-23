@@ -248,10 +248,13 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
         </tbody>
       </table>
     </div>
-
+ <div class="col-md-9"> </div>
+    <form id="eform" onsubmit="return isValidForm()" action="payments.php" method="post">
+    <div class="col-md-2">
+      <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
+    </div>
     
     
-    <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
     <div class="col-md-11"> </div>
     <form id="eform" onsubmit="return isValidForm()" action="payments.php" method="post">
     <div class="col-md-1">

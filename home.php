@@ -29,21 +29,21 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('imgs/slu.jpg');"></div>
+                <div class="fill" style="background-image:url('imgs/index.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Saint Louis University</h2>
+                    
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('imgs/maryheights.jpg');"></div>
+                <div class="fill" style="background-image:url('imgs/img4.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Maryheights Campus</h2>
+                    
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('imgs/main.jpg');"></div>
+                <div class="fill" style="background-image:url('imgs/img3.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Main Campus</h2>
+                    
                 </div>
             </div>
         </div>
@@ -74,11 +74,11 @@
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-<<<<<<< .mine
+
                         <a href="#" class="btn btn-default">Read More..</a>
-=======
-                        <a href="#" class="btn btn-default">Read More</a>
->>>>>>> .r113
+
+                       
+
                     </div>
                 </div>
             </div>
@@ -89,11 +89,11 @@
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-<<<<<<< .mine
+
                         <a href="#" class="btn btn-default">Read More..</a>
-=======
-                        <a href="#" class="btn btn-default">Read More</a>
->>>>>>> .r113
+
+                     
+
                     </div>
                 </div>
             </div>
@@ -104,11 +104,11 @@
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-<<<<<<< .mine
+
                         <a href="#" class="btn btn-default">Read more..</a>
-=======
-                        <a href="#" class="btn btn-default">Read More</a>
->>>>>>> .r113
+
+                        
+
                     </div>
                 </div>
             </div>
