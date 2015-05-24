@@ -159,7 +159,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p> WEBKTEK 2015</p>
+                    <p> WEBTEK 2015</p>
                 </div>
             </div>
         </footer>
