@@ -206,8 +206,10 @@ $('#t_draggable1').dblclick(function(e){
 // Select block Trisha Francisco
 function selectBlock() {     
     var tbl2 = document.getElementById('t_draggable2');
+    var sourcehead = document.getElementById('blkhead');
     var source = document.getElementById('blk');
     var destination = document.getElementById('addSubj');
+    var copyhead = sourcehead.cloneNode(true);
     var copy = source.cloneNode(true);
 
     while (destination.lastChild) {
@@ -216,18 +218,35 @@ function selectBlock() {
 
     copy.id = 'addSubj';
     // copy.deleteRow(0);
-    console.log(copy.childElementCount);
+    var ch = copyhead.children; 
     var c = copy.children;
     
-    for (var i = 0; i < c.length; i++) {  
+    for (var i = 0; i < ch.length; i++) {  
+        var srchead = document.getElementById('blkhead');
         var src = document.getElementById('blk');
+        var cpyhead = sourcehead.cloneNode(true);
         var cpy = source.cloneNode(true);
         cpy.id = 'addSubj';
         // cpy.deleteRow(0);
+        var dh = cpyhead.children;
+        var d = cpy.children;
+
+        destination.appendChild(dh[i]);
+
+    }
+
+    for (var i = 0; i < c.length; i++) {  
+        var srchead = document.getElementById('blkhead');
+        var src = document.getElementById('blk');
+        var cpyhead = sourcehead.cloneNode(true);
+        var cpy = source.cloneNode(true);
+        cpy.id = 'addSubj';
+        // cpy.deleteRow(0);
+        var dh = cpyhead.children;
         var d = cpy.children;
 
         destination.appendChild(d[i]);
-    }
+    }    
 
    // $('#subjectsModal').modal('hide');
 

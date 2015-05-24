@@ -59,7 +59,7 @@
             <div class="modal-body">
               <div class="well">
                 <table id="blkTbl" class="tables_ui table table-hover"  onmouseover="displayUnits(event)">
-                  <thead id="blk" class="t_sortable">
+                  <thead id="blkhead" class="t_sortable">
 
                     <tr>
                       <th>Class Code</th>
@@ -82,7 +82,7 @@ $numberOfBlocks = 0;
               }
         }
 for($block = 1;  $block <= $numberOfBlocks ; $block++){
-  echo '<tbody>';
+  echo '<tbody id="blk">';
  $sql = "SELECT classcode, courseno, description, time, days,room, units from class natural join course WHERE blockno = ".$block." AND year = ". $resultRow['year'] ; 
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {
