@@ -17,12 +17,10 @@ include 'includes/headerelements.php';
 <div class="col-sm-12">
 
 <body>
-<!--
 	<h1>Change Password</h1>
 	</div>
 </div>
-<!--
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="row">
 <div class="col-sm-6 col-sm-offset-3">
 	<p class="text-center">Use the form below to change your password. Your password cannot be the same as your username.</p>
 	<form method="post" id="passwordForm" action="includes/changepassword.php">
@@ -68,8 +66,7 @@ include 'includes/headerelements.php';
 <input type="submit" class="col-xs-12 btn btn-primary btn-load btn-lg" data-loading-text="Changing Password..." value="Change Password">
 </form>
 </div><!--/col-sm-6-->
-<!--/row-->
-
+</div><!--/row-->
 
 
 </body>
