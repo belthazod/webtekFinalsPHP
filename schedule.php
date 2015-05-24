@@ -8,15 +8,8 @@
      include 'includes/header.php';
    include 'includes/headerelements.php'; 
    $param = $_GET['idno'];
-     
-   $sql = "SELECT classcode,courseno, description, days, time, room
-from student natural join enrollment natural join enrollmentdetails join class using(classcode)
-    join course using (courseno)  FROM student where idno = ".$_SESSION["idno"];
-
-   $rs = $conn->query($sql);
-   $resultRow = $rs->fetch_assoc() 
-     ?>
-
+    ?> 
+  
 
 </head>
 
@@ -43,6 +36,29 @@ from student natural join enrollment natural join enrollmentdetails join class u
         </tr>
       </thead>
       <tbody>
+      <?php
+      $sql = "SELECT classcode,courseno, description, days, class.time, room
+from student natural join enrollment natural join enrollmentdetails join class using(classcode)
+    join course using (courseno) where idno = ".$_SESSION["idno"];
+ 
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                
+              echo '<tr>
+                      <td>' . $row["classcode"] . '</td>
+                      <td>' . $row["courseno"] . '</td>
+                      <td>' . $row["description"] . '</td>
+                      <td>' . $row["time"] . '</td>
+                      <td>' . $row["days"] . '</td>
+                      <td>' . $row["room"] . '</td>
+
+                  </tr>';
+                }
+              }
+              ?>
+
         <!--<tr>
           <td>9570</td>
           <td>IT 324L</td>

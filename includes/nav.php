@@ -52,11 +52,11 @@
                     </li>
 
                     <ul class="nav navbar-nav">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" > <span class="badge">1</span>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" > <span class="badge" id='notifCount'>1</span>
                                         </b></a>
                                         <ul class="dropdown-menu">
-                                        <div class="navbar-content">
-
+                                        <div class="navbar-content" id='notif'>
+                                            <!--
                                             <li>
                                                 <div class="alert alert-success alert-dismissable">
                                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -76,15 +76,45 @@
                                                 <strong>Warning!</strong> Better check yourself, you're not looking too good.
                                             </div>
                                             </li>
-                                            <li>
-                                            <div class="alert alert-danger alert-dismissable">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                <strong>Oh snap!</strong> Change a few things up and try submitting again.
-                                            </div>
-                                            </li>
+                                            -->
+                                            <?php 
+                                                $servername = "localhost";
+                                                $username = "root";
+                                                $password = "";
+                                                $dbname = "enrollment";
+
+                                                // Create connection
+                                                $conn = new mysqli($servername, $username, $password, $dbname);
+                                                // Check connection
+                                                if ($conn->connect_error) {
+                                                    die("Connection failed: " . $conn->connect_error);
+                                                }
+                                                $sql = "SELECT class.courseno From enrollment JOIN enrollmentdetails USING(enrolid) JOIN class USING(classcode)WHERE idno = '".$_SESSION['idno']."' AND class.status = 'DISSOLVED'"; 
+                                                $result = $conn->query($sql);
+                                                if ($result->num_rows > 0) {
+                                                    // output data of each row
+                                                    while($row = $result->fetch_assoc()) {
+                                                        
+                                                    echo 
+                                                    '<li>
+                                                    <div class="alert alert-danger alert-dismissable">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                    <strong>Warning!</strong> Your subject  '.$row['courseno'].' has been dissolved. Please visit the dean\'s office immediately.
+                                                    </div>
+                                                    </li>';
+                                                    }
+
+                                                }   
+
+                                            ?>
+
                                         </div>
                                         </ul>
-
+                                    <script>
+                                    var notifCount = document.getElementById('notif').getElementsByTagName('<li>');
+                                    document.getElementById('notifCount').innerHTML = notifCount.length;
+                                    alert(notifCount.length);
+                                    </script>
 
                                     </li>
                                 </ul>
