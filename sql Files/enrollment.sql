@@ -28,6 +28,7 @@ CREATE TABLE `announcement` (
   `announcement_id` int(11) NOT NULL,
   `Title` varchar(500) DEFAULT NULL,
   `Content` varchar(500) DEFAULT NULL,
+  `public` enum('employee','student') DEFAULT NULL,
   PRIMARY KEY (`announcement_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +39,7 @@ CREATE TABLE `announcement` (
 
 LOCK TABLES `announcement` WRITE;
 /*!40000 ALTER TABLE `announcement` DISABLE KEYS */;
-INSERT INTO `announcement` VALUES (0,'2nd Place, John Alvin O. Reyes ',NULL),(1,'Congratulation to ARCH. LORD BYRON F. GONZALES','Gonzales, Lord Byron F. & Romero, Robert V. (2014) Cluster Housing Concept: A Sustainable Site Design Approach of the Residential Subdivision in the Municipality of Tuba, Philippines. Journal Settlements and Spatial Planning.'),(2,'Congratulation to MARK JOB G. BASCOS','Bascos, Mark Job G. (2014) A Concept Analysis of Mentoring. Philippine Journal of Nursing.'),(3,'Congratulation to LOTA O. FLORENTINO','Florentino, Lota O. (2014). Integrating Local Literature in Teaching English to First Graders under K-12 Curiculum. Theory and Practice in Langugage Studies'),(4,'SLU President is 2014 Baguio City Outstanding Citizen Awardee','SLU president Fr. Jessie M. Hechanova, CICM, received  the 2014 Baguio City Outstanding Citizen Award in the field of education by the City Government of Baguio at ceremonies held in the Baguio Convention Center on 1 September  2014, during the 105th Baguio Charter Day celebration.'),(5,'Congratulations to the successfull examinees in the Medical Technologist Licensure Examination given in March 2015.','2nd Place (89.50 %)  John Alvin O. Reyes 3rd Place (89.30%) Teneisha Jhonne M. Brett 7th Place (88.60%) Hazel Hope M. Acosta');
+INSERT INTO `announcement` VALUES (1,'Congratulation to ARCH. LORD BYRON F. GONZALES','Gonzales, Lord Byron F. & Romero, Robert V. (2014) Cluster Housing Concept: A Sustainable Site Design Approach of the Residential Subdivision in the Municipality of Tuba, Philippines. Journal Settlements and Spatial Planning.','employee'),(2,'Congratulation to MARK JOB G. BASCOS','Bascos, Mark Job G. (2014) A Concept Analysis of Mentoring. Philippine Journal of Nursing.','employee'),(3,'Congratulation to LOTA O. FLORENTINO','Florentino, Lota O. (2014). Integrating Local Literature in Teaching English to First Graders under K-12 Curiculum. Theory and Practice in Langugage Studies','student'),(4,'SLU President is 2014 Baguio City Outstanding Citizen Awardee','SLU president Fr. Jessie M. Hechanova, CICM, received  the 2014 Baguio City Outstanding Citizen Award in the field of education by the City Government of Baguio at ceremonies held in the Baguio Convention Center on 1 September  2014, during the 105th Baguio Charter Day celebration.','student'),(5,'Congratulations to the successfull examinees in the Medical Technologist Licensure Examination given in March 2015.','2nd Place (89.50 %)  John Alvin O. Reyes 3rd Place (89.30%) Teneisha Jhonne M. Brett 7th Place (88.60%) Hazel Hope M. Acosta','student');
 /*!40000 ALTER TABLE `announcement` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -504,4 +505,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-24 17:24:14
+-- Dump completed on 2015-05-24 17:49:59
