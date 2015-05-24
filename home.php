@@ -177,9 +177,9 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <p>Saint Louis University is now offering online enrollment for enrolled students! <br>Enrollment Period: June 9, 2015 - June 11,2015<br> Summer Term Begins : June 15, 2015 </p>
+                    <p>Saint Louis University is now offering online enrollment for enrolled students! <br><br>Enrollment Period: June 9, 2015 - June 11,2015<br> Summer Term Begins : June 15, 2015 </p>
 
-                    <p> Saint Louis University is regarded as one of the Philippines' respected and leading educational institutions that has grown with the demands of the current and future environments for its students and faculty alike.</p>
+                    
 
                 </div>
                 <div class="col-md-4">
