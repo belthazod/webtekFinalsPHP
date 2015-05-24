@@ -4,6 +4,11 @@
 html,
 body {
     height: 100%;
+
+}
+
+#profile2 {
+  display:none;
 }
 
 body {
@@ -60,6 +65,10 @@ footer {
 
     #profile {
         display:none;
+    }
+
+    #profile2 {
+        display: inline;
     }
 }
 
@@ -211,63 +220,11 @@ div.block-chooser{
 }
 
 
-.footer-distributed{ /*Danica Desembrana*/
-  background-color: #292c2f;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: normal 16px sans-serif;
-
-  padding: 45px 50px;
-  margin-top: 80px;
-}
-
-.footer-distributed .footer-left p{ /*Danica Desembrana*/
-  color:  #8f9296;
-  font-size: 14px;
-  margin: 0;
-}
-
-
-
-
-
-.footer-distributed .footer-right{ /*Danica Desembrana*/
-  float: right;
-  margin-top: 6px;
-  max-width: 180px;
-}
-
-.footer-distributed .footer-right a{ /*Danica Desembrana*/
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background-color:  #33383b;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-
-  margin-left: 3px;
-}
-
-
-@media (max-width: 600px) { /*Danica Desembrana*/
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-right{
-    text-align: center;
-  }
-
-  .footer-distributed .footer-right{
-    float: none;
-    margin: 0 auto 20px;
-  }
-
-  
+.payments {
+  font-size: 1.5em; 
 }
    
-    
+#profile2 p {
+
+  color: white;
+}
