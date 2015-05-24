@@ -111,9 +111,9 @@
                                         </div>
                                         </ul>
                                     <script>
-                                    var notifCount = document.getElementById('notif').getElementsByTagName('<li>');
+                                    var notifCount = document.getElementById('notif').getElementsByTagName('li');
                                     document.getElementById('notifCount').innerHTML = notifCount.length;
-                                    alert(notifCount.length);
+                                  
                                     </script>
 
                                     </li>

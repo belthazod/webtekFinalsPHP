@@ -21,7 +21,6 @@
 
     
      <script src="js/script.js"></script>
-     <script src="js/TweenLite.min.js"></script>
 
     <!-- Drag and Drop -->
     <script src="jq/jquery-2.1.4.min.js"></script>
