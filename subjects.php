@@ -29,18 +29,10 @@
 <body ondblclick = "displayUnits()">
 
   <?php include 'includes/nav.php';?> 
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
-    ...
-    <li role="presentation" class="dropdown-header">Dropdown header</li>
-    ...
-  </ul>
-  
+
+
+<div class="container">
   <br>
-
-   <div class="col-md-5">
-
-     <!-- <button type="button" class="btn btn-primary btn-lg" > a</button> -->
-   </div>
 
     <div class="col-md-9">
       <!-- Button trigger modal -->
@@ -250,7 +242,7 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
     </div>
  <div class="col-md-9"> </div>
     <form id="eform" onsubmit="return isValidForm()" action="payments.php" method="post">
-    <div class="col-md-2">
+    <div class="col-md-3">
       <p id="noOfUnits">Total Number of Units: <span id="units"></span></p>
     </div>
     
@@ -259,18 +251,11 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
     <form id="eform" onsubmit="return isValidForm()" action="payments.php" method="post">
     <div class="col-md-1">
       <button type="submit" class="btn btn-primary" onclick="validateUnits()">Pre-Enroll</button>
+      <br>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="row">
-      <div class="col-lg-12">
-        <p> WEBTEK 2015</p>
-      </div>
-    </div>
-  </footer>
-
+</div>
 
   <!-- script.js -->
   <script src="js/script.js"></script>

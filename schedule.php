@@ -18,10 +18,11 @@
         <?php include 'includes/nav.php';?> 
     <!-- Page Content -->
 
-
-        <!-- Page Heading/Breadcrumbs -->
+<br>
+     
       
         <!-- /.row -->
+<div class="container">
 <div class="well">
     <table class="table">
       <thead>
@@ -127,6 +128,7 @@ from student natural join enrollment natural join enrollmentdetails join class u
         </tr>-->
       </tbody>
     </table>
+</div>
 </div>
 
     <!-- jQuery -->

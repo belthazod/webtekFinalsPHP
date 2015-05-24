@@ -20,6 +20,8 @@
 <body>
 
 	      <?php include 'includes/nav.php';?> 
+
+          <br>
     <!-- Page Content -->
     <div class="container">
 
@@ -31,7 +33,7 @@
     <div class="col-md-12">
       <form class="form-horizontal" role="form">
         <fieldset>
-          
+        
           <!-- Form Name -->
           <legend>View Profile</legend>
          <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $resultRow['image'] ).'"/>'; ?>
@@ -242,14 +244,7 @@
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>WEBTEK 2015</p>
-                </div>
-            </div>
-        </footer>
+   
 
     </div>
     <!-- /.container -->
