@@ -142,32 +142,17 @@
 </div>
 
 </form>
-        </div>
-                    
-        </fieldset>
+	<br>
+	<br>
+    <fieldset>
+    	<h4>Payment Method</h4>
+    	<p><a href="">On-site Payment (Cash, Cheque)</a></p>
+    	<p><a href="cc-payment.html">Online Payment (Credit Card)</a></p>
 
-        <fieldset>
-            <legend>Online Payment(Credit Card)</legend>
-            <a href="http://www.visa.com/globalgateway/"><img src="imgs/visa.gif"></a>
-            <a href="http://www.mastercard.com"><img src="imgs/master.gif"></a>
-            <a href="http://www.discover.com/"><img src="imgs/discover.gif"></a>
-            <a href="http://www.americanexpress.com/"><img src="imgs/american.gif"></a>
-            <br>
-            <br>
-            <div class="form-group">
-                <label class="col-sm-1 control-label" for="textinput">Amount:</label>
-                <div class="col-sm-4">
-                  <input type="radio" name="amount" value="full">Full Tuition
-                  <input type="radio" name="amount" value="down">Down Payment
-                </div>
-            </div>
-           <form action="./cc-payment.html">
-                <input type="button" onclick="window.location.href='cc-payment.html'"  value="Proceed" style="width: 300px; margin: 0 auto;" >
-           </form>
-        </fieldset>
+    </fieldset>               
             
         <hr>
-    </form>
+   </form>
         <!-- Footer -->
         <footer>
             <div class="row">
