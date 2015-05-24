@@ -30,7 +30,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+			 <ul class="nav navbar-nav navbar-right">
                     
                     
                    
@@ -50,8 +50,8 @@
                     <li>
                         <a href="contact.php">Contact Us</a>
                     </li>
-					
-					 <ul class="nav navbar-nav">
+
+                    <ul class="nav navbar-nav">
                                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" > <span class="badge">1</span>
                                         </b></a>
                                         <ul class="dropdown-menu">
@@ -89,8 +89,12 @@
                                     </li>
                                 </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Profile  <span class="badge">1</span>
+                     
+                                    
+
+                                
+                    <ul class="nav navbar-nav navbar-right ">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" ><span class="label label label-info">Profile</span> 
                                         <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li>
@@ -114,9 +118,12 @@
                                                                <?php echo $_SESSION['idno']?></p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm active">View Profile</a>
-                                                            <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm activ">View Schedule</a>															
-													   </div>
+
+
+                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="label label label-info">View Profile</a>   
+															<a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="label label label-info">View Schedule</a>                                                        
+                                                          
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="navbar-footer">
@@ -125,7 +132,9 @@
                                                             <div class="col-md-6">
 
 
-                                                                <a href="passwordform.php" class="btn btn-default btn-sm">Change Password</a>
+                                                                <a href="includes/changepassword.php" class="btn btn-primary" data-toggle="modal" data-target="#modal" data-whatever="@mdo">Change Password</button>
+																
+
                                             </div>
                                                             <div class="col-md-6">
                                                                 <a href="includes/logout.php" class="btn btn-default btn-sm pull-right">Sign Out</a>
@@ -133,14 +142,22 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+
                                             </li>
+                                    
                                         </ul>
+
+
                                     </li>
                                 </ul>
+
+                              
 
                     
                     
                 </ul>
+	
             </div>
             <!-- /.navbar-collapse -->
         </div>
