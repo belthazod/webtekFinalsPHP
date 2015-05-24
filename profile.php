@@ -7,7 +7,7 @@
      include 'includes/dbconnection.php';
      include 'includes/header.php';
 	 include 'includes/headerelements.php'; 
-	 $param = $_GET['idno'];
+	 //$param = $_GET['idno'];
      
 	 $sql = "SELECT * FROM student where idno = ".$_SESSION["idno"];
 	 $rs = $conn->query($sql);

@@ -106,11 +106,10 @@
 
                                                            <?php
                                                            echo '<img src="data:image/jpeg;base64,'.base64_encode( $_SESSION['image'] ).'"/>';
-                                                            //<img src="http://placehold.it/120x120"
-                                                              //  alt="Alternate Text" class="img-responsive" />
                                                            ?>
+                                                           
                                                             <p class="text-center small">
-                                                                <a href="#">Change Photo</a></p>
+                                                                <a href="changephoto.php" class="btn btn-default btn-sm">Change Photo</a>
                                                         </div> 
                                                         <div class="col-md-7">
                                                             <span><?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></span>
