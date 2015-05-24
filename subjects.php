@@ -178,7 +178,7 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
             <div class="modal-footer">
               <button type="button" class="btn btn-default" onclick ="previousBlock()" >Previous</button>
               <button type="button" class="btn btn-default" onclick="nextBlock()" >Next</button>
-              <button id="chooseBlock" onclick="selectBlock()" type="button" class="btn btn-primary">Choose Block</button>
+              <button id="chooseBlock" onclick="selectBlock()" type="button" class="btn btn-primary" data-dismiss="modal">Choose Block</button>
               
             </div>
           </div>

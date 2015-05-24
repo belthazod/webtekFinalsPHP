@@ -31,8 +31,9 @@
         <!-- Intro Content -->
         <div class="row">
             <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <img class="img-responsive" src="imgs/main.jpg" alt="">
+                <hr>
+                <img class="img-responsive" src="imgs/maryheights.jpg" alt="">
             </div>
             <div class="col-md-6">
                 
@@ -42,11 +43,11 @@
                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="about">
-      <h6 class="panel-title">
+      <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         <h6> About SLU </h6>
+         <h4> About SLU </h4>
         </a>
-      </h6>
+      </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
@@ -59,11 +60,11 @@
 
     <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="vision">
-      <h6 class="panel-title">
+      <h4 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-            <h6>Vision and Mission</h6>
+            <h4>Vision and Mission</h4>
         </a>
-      </h6>
+      </h4>
     </div>
     <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
       <div class="panel-body">
@@ -73,11 +74,11 @@
   </div>
   <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="awards">
-      <h6 class="panel-title">
+      <h4 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <h6>Institutional Awards</h6>
+            <h4>Institutional Awards</h4>
         </a>
-      </h6>
+      </h4>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
@@ -101,11 +102,11 @@
   </div>
   <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="campuses">
-      <h6 class="panel-title">
+      <h4 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <h6> Campuses </h6>
+          <h4> Campuses </h4>
         </a>
-      </h6>
+      </h4>
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="campuses">
       <div class="panel-body">
@@ -119,11 +120,11 @@
   </div>
    <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="schools">
-      <h6 class="panel-title">
+      <h4 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-          <h6>Schools</h6>
+          <h4>Schools</h4>
         </a>
-      </h6>
+      </h4>
     </div>
     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="campuses">
       <div class="panel-body">

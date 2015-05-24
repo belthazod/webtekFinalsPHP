@@ -67,6 +67,8 @@
                     Welcome to Saint Louis University Online Enrollment
                 </h1>
             </div>
+
+            
             <div class="col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -125,10 +127,10 @@
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                    <p> Saint Louis University is regarded as one of the Philippines' respected and leading educational institutions that has grown with the demands of the current and future environments for its students and faculty alike.</p>
                 </div>
                 <div class="col-md-4">
-                    <a href="subjects.php" class="btn btn-lg btn-primary btn-block" href="#">Enroll now</a>
+                    <a href="subjects.php" class="btn btn-lg btn-primary btn-block" href="#">Pre-Enroll now</a>
                 </div>
             </div>
         </div>
