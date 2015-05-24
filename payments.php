@@ -68,7 +68,7 @@
             <p><b>Schedule valid for two business days.</b></p>
             <label>Schedule Due date</label><p id='due'></p>
  
-    <h4><a data-toggle="modal" data-target="#myModal">Schedule</a></h4>
+    <h4><button onclick="myfunction()" type="button" class="btn btn-default"><a data-toggle="modal" data-target="#myModal">Schedule</a></button></h4>
         
                             <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -79,45 +79,7 @@
                                     <h4 class="modal-title" id="myModalLabel">Enrolled Schedule</h4>
                                   </div>
                                   <div class="modal-body">
-                                    <table class="table">
-      <thead>
-        <tr>
-          <th>Class Code</th>
-          <th>Course Number</th>
-          <th>Descriptive Title</th>
-          <th>Time and Day</th>
-      <th>Room</th>
-      <th>Units</th>
-          <th style="width: 36px;"></th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php
-      $sql = "SELECT count(classcode) as count, classcode,courseno, description, days, class.time, room
-from student natural join enrollment natural join enrollmentdetails join class using(classcode)
-    join course using (courseno) where idno = ".$_SESSION["idno"];
- 
-          $result = $conn->query($sql);
-          if ($result->num_rows > 0) {
-              // output data of each row
-              while($row = $result->fetch_assoc()) {
-
-              echo '<tr>
-                      <td>' . $row["classcode"] . '</td>
-                      <td>' . $row["courseno"] . '</td>
-                      <td>' . $row["description"] . '</td>
-                      <td>' . $row["time"] . '</td>
-                      <td>' . $row["days"] . '</td>
-                      <td>' . $row["room"] . '</td>
-
-                  </tr>';
-                
-                }
-              }
-              ?>
-
-      </tbody>
-    </table>
+                                    <a href="schedule.php"></a>
                                   </div>
                             </div>
                         </div>
@@ -191,15 +153,28 @@ from student natural join enrollment natural join enrollmentdetails join class u
     	<h4>Payment Method</h4>
     		<input type="radio" id="onsite" name="amount" value="onsi">On-Site Payment
          	<input type="radio" id="online" name="amount" value="onli">Online Payment	
+                       <!-- Modal -->
+                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Enrolled Schedule</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <a href="schedule.php"></a>
+                                  </div>
+                            </div>
+                        </div>
+                    </div> 
             <br>
             <br>
-         	<button onclick="myfunction()">Next</button>
+         	<button onclick="myfunction()" type="button" class="btn btn-default">Next</button>
     </fieldset>              
         <script>
             function myfunction(){
-
                 if (document.getElementById('onsite').checked) {
-                    window.location.href = "";
+                    window.location.href = "onsite-payment.php"; 
                 } else if (document.getElementById('online').checked){
                     window.location.href = "cc-payment.php";
 
@@ -207,17 +182,7 @@ from student natural join enrollment natural join enrollmentdetails join class u
             }
         
         </script>    
-        <hr>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>WEBTEK 2015</p>
-                </div>
-            </div>
-        </footer>
-        </div>
-    </div>
+        
     <!-- /.container -->
 
     <!-- jQuery -->

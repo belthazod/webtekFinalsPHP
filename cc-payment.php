@@ -30,65 +30,6 @@
     <div class="col-md-12">
       
           <!-- Form Name -->
-          <fieldset>
-    <div class="row">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Breakdown of Fees</div>
-
-  <!-- Table -->
-  <table class="table">
-    <tr>
-    <th>Reference</th>
-    <th>Explanation</th>
-    <th>Number of Units </th>
-    <th>Amount</th>
-    </tr>
-    
-    <tr>
-    <th></th>
-    <th>Beginning Balance</th>
-    <th>n/a</th>
-    <th>-1,000.00</th>
-    </tr>
-    
-    <tr>
-    <th>General subjects</th>
-    <th>Tuition fee @300.00/unit</th>
-    <th>2</th>
-    <th>600.00</th>
-    </tr>
-    
-    <tr>
-    <th>Major subjects</th>
-    <th>Tuition fee @500.00/unit</th>
-    <th>4</th>
-    <th>2,000.00</th>
-    </tr>
-
-    <tr>
-    <th>Laboratory Fees</th>
-    <th>Laboratory and other fees</th>
-    <th>n/a</th>
-    <th>15,000.00</th>
-    </tr>
-    
-    <tr>
-    <th></th>
-    <th></th>
-    <th>Total Balance</th>
-    <th>16,600.00</th>
-    </tr>
-    
-    <tr>
-    <th></th>
-    <th></th>
-    <th>Downpayment</th>
-    <th>8,600.00</th>
-    </tr>
-    
-  </table>
-</div>
-</fieldset>
           <h1>Secure Payment</h1>
           <br>
           <br>
@@ -194,13 +135,13 @@
         <fieldset>
             <legend>Billing Information</legend>
             <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput">Adress 1</label>
+                <label class="col-sm-2 control-label" for="textinput">Address 1</label>
                 <div class="col-sm-8">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput">Adress 2</label>
+                <label class="col-sm-2 control-label" for="textinput">Address 2</label>
                 <div class="col-sm-8">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
@@ -236,16 +177,7 @@
 
         <hr>
     </form>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>WEBTEK 2015</p>
-                </div>
-            </div>
-        </footer>
-        </div>
-    </div>
+
     <!-- /.container -->
     <!-- validate form -->
 
