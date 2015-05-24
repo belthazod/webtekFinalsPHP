@@ -257,5 +257,3 @@ function selectBlock() {
 
 /* Danica Rose Desembrana parallax*/
 
-
-

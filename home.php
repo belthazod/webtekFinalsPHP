@@ -96,8 +96,18 @@
                             ?>
 
 
-                       
+ 
+                             $result = $conn->query($sql);
+                          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                
+              echo '<h4>' .  $row['title'] . '</h4>';
+                }
+              }
 
+                        ?>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -126,6 +136,17 @@
                             ?>
 
      
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                
+              echo '<p>' .  $row['content'] . '</p>';
+                }
+              }
+              ?>
+                
+                        </p>
 
                      
 
@@ -158,17 +179,12 @@
 
 
 
-                        
+                       
 
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
+                
 
-        
-
-        
+    
 
         <hr>
 
@@ -181,7 +197,7 @@
 
                     
 
-                </div>
+    </div>
                 <div class="col-md-4">
                     <a href="subjects.php" class="btn btn-lg btn-primary btn-block" href="#">Pre-Enroll now</a>
                 </div>

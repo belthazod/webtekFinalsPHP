@@ -25,7 +25,7 @@
     <!-- Drag and Drop -->
     <script src="jq/jquery-2.1.4.min.js"></script>
     <script src="jq/jquery-ui.min.js"></script>
-
+    <script src="js/jquery-1.11.1.min.js"></script>
     <link href="js/jquery.bootgrid.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bootgrid.min.js"></script>

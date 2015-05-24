@@ -50,18 +50,23 @@
                 var refresh=1000; // Refresh rate in milli seconds
                 mytime=setTimeout('display_ct()',refresh)
             }
-
+            var x;
             function display_ct() {
-                var strcount
-                var x = new Date()
-                var x1=" " + x.getMonth() + "/" + x.getDate() + "/" + x.getYear(); 
+                var strcount;
+                x = new Date(); 
+                var x1=" " + x.getMonth() + "/" + x.getDate() + "/" + x.getFullYear(); 
                 x1 = x1 + " - " + x.getHours( )+ ":" + x.getMinutes() + ":" + x.getSeconds();
                 document.getElementById('ct').innerHTML = x1;
-
+                if(document.getElementById('due').innerHTML == ""){
+                    var y =  x.getMonth() + "/" + (x.getDate()+2) + "/" + x.getFullYear();
+                document.getElementById('due').innerHTML =y;
+                }
                 tt=display_c();
                 }
+
             </script>
-            <p><b>Schedule valid for two business days.</b>
+            <p><b>Schedule valid for two business days.</b></p>
+            <label>Schedule Due date</label><p id='due'></p>
  
     <h4><a data-toggle="modal" data-target="#myModal">Schedule</a></h4>
         
