@@ -8,16 +8,42 @@
      include 'includes/header.php'; 
      ?>
 
+    
+
 
 </head>
 
 <body>
 
       <?php include 'includes/nav.php';?> 
-      <p> Your payment has been successfully acknowledged. You are <strong> Officially Enrolled</strong></p>
-       <label>Schedule Due date</label><p id='due'></p>
+       
+        <div class="container">
+    <div class="col-md-12">
+
+      <br>
+
+      <div class="col-md-9">
+
+      <div class="alert alert-success align">
+                                                    
+                                                     <p> Your payment has been successfully acknowledged. You are <strong> Officially Enrolled</strong></p>
+                                                </div>
+      
+     
+
+      </div>
+
+    
+
+    <div class="col-md-3">
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg align center" data-toggle="modal" data-target="#myModal">
+  View Schedule
+</button>
+
+ </div>
+ </div>
  
-    <h4><button onclick="myfunction()" type="button" class="btn btn-default"><a data-toggle="modal" data-target="#myModal">Schedule</a></button></h4>
         
                             <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -28,10 +54,60 @@
                                     <h4 class="modal-title" id="myModalLabel">Enrolled Schedule</h4>
                                   </div>
                                   <div class="modal-body">
-                                    <a href="schedule.php"></a>
+                                    <table class="table">
+      <thead>
+        <tr>
+          <th>Class Code</th>
+          <th>Course Number</th>
+          <th>Descriptive Title</th>
+          <th>Time and Day</th>
+      <th>Room</th>
+      <th>Units</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+      $sql = "SELECT count(classcode) as count, classcode,courseno, description, days, class.time, room
+from student natural join enrollment natural join enrollmentdetails join class using(classcode)
+    join course using (courseno) where idno = ".$_SESSION["idno"];
+ 
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+
+              echo '<tr>
+                      <td>' . $row["classcode"] . '</td>
+                      <td>' . $row["courseno"] . '</td>
+                      <td>' . $row["description"] . '</td>
+                      <td>' . $row["time"] . '</td>
+                      <td>' . $row["days"] . '</td>
+                      <td>' . $row["room"] . '</td>
+
+                  </tr>';
+                
+                }
+              }
+              ?>
+
+      </tbody>
+    </table>
                                   </div>
                             </div>
                         </div>
                     </div> 
+                    </div>
+                    </div>
           <!-- Text input-->
+
+           <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+     
 </body>
+
+</html>

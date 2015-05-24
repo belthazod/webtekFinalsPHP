@@ -9,7 +9,6 @@
      ?>
 
 
-</head>
 
 <body onload=display_ct();>
 
@@ -18,30 +17,49 @@
     </head>
 
    
-        </div>
+       
         <!-- /.container -->
-    </nav>    
+  
     <!-- Page Content -->
-    <div class="container">
-      
-        <!-- /.row -->
-
-    <div class="row">
+     <div class="container">
     <div class="col-md-12">
-          <br>
-          <br>
-          <h4>You have successfully pre enrolled your subject. <br><br>To be officially enrolled please settle your payment until 
+
+      <br>
+
+      <div class="col-md-12">
+
+      <div class="alert alert-success align">
+
+       <p> You have successfully pre enrolled your subject. 
+        To be officially enrolled please settle your payment until 
+           <strong>
+
            <?php
           $rightnow = date('Y-m-d');
           $add7days = date('Y-m-d', strtotime('+3 days'));
           echo "$add7days.";
           ?></h4>
+          </strong>
 
-          <br>
-          <br>
-          <h4>You will be informed if your payment has been acknowledged.</h4>
-    </div>
+          <br><br>
+                           
+          <h4>You will be informed if your payment has been acknowledged.</h4>                         
+       
+       </p>
+        </div>
+      
+     
 
+      </div>
+
+    
+
+  
+ </div>
+      </div>
+        <!-- /.row -->
+
+    
 
 
     <!-- /.container -->
