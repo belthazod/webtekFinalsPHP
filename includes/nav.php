@@ -50,6 +50,45 @@
                     <li>
                         <a href="contact.php">Contact Us</a>
                     </li>
+					
+					 <ul class="nav navbar-nav">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" > <span class="badge">1</span>
+                                        </b></a>
+                                        <ul class="dropdown-menu">
+                                        <div class="navbar-content">
+
+                                            <li>
+                                                <div class="alert alert-success alert-dismissable">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                    <strong>Well done!</strong> You successfully read this important alert message.
+                                                </div>
+
+                                            </li>
+
+                                             <li>
+                                            <div class="alert alert-info alert-dismissable">
+                                                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="alert alert-warning alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="alert alert-danger alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                                            </div>
+                                            </li>
+                                        </div>
+                                        </ul>
+
+
+                                    </li>
+                                </ul>
+
                     <ul class="nav navbar-nav navbar-right">
                                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Profile  <span class="badge">1</span>
                                         <b class="caret"></b></a>
@@ -76,8 +115,8 @@
                                                             <div class="divider">
                                                             </div>
                                                             <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm active">View Profile</a>
-                                                            <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm active">View Schedule</a>
-                                                        </div>
+                                                            <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="btn btn-primary btn-sm activ">View Schedule</a>															
+													   </div>
                                                     </div>
                                                 </div>
                                                 <div class="navbar-footer">
@@ -107,3 +146,16 @@
         </div>
         <!-- /.container -->
     </nav>
+	
+	
+
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
