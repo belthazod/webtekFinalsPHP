@@ -30,10 +30,69 @@
     <div class="col-md-12">
       
           <!-- Form Name -->
+          <fieldset>
+    <div class="row">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Breakdown of Fees</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+    <th>Reference</th>
+    <th>Explanation</th>
+    <th>Number of Units </th>
+    <th>Amount</th>
+    </tr>
+    
+    <tr>
+    <th></th>
+    <th>Beginning Balance</th>
+    <th>n/a</th>
+    <th>-1,000.00</th>
+    </tr>
+    
+    <tr>
+    <th>General subjects</th>
+    <th>Tuition fee @300.00/unit</th>
+    <th>2</th>
+    <th>600.00</th>
+    </tr>
+    
+    <tr>
+    <th>Major subjects</th>
+    <th>Tuition fee @500.00/unit</th>
+    <th>4</th>
+    <th>2,000.00</th>
+    </tr>
+
+    <tr>
+    <th>Laboratory Fees</th>
+    <th>Laboratory and other fees</th>
+    <th>n/a</th>
+    <th>15,000.00</th>
+    </tr>
+    
+    <tr>
+    <th></th>
+    <th></th>
+    <th>Total Balance</th>
+    <th>16,600.00</th>
+    </tr>
+    
+    <tr>
+    <th></th>
+    <th></th>
+    <th>Downpayment</th>
+    <th>8,600.00</th>
+    </tr>
+    
+  </table>
+</div>
+</fieldset>
           <h1>Secure Payment</h1>
           <br>
           <br>
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" action='includes/ccinfo.php' method="POST">
           <!-- Text input-->
         <a href="http://www.visa.com/globalgateway/"><img src="imgs/visa.gif"></a>
             <a href="http://www.mastercard.com"><img src="imgs/master.gif"></a>
@@ -56,20 +115,20 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="textinput">Card Holder Name</label>
                 <div class="col-sm-4">
-                  <input type="text" placeholder="" class="form-control" required>
+                  <input type="text" placeholder="" class="form-control" name="cardholder" required>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="textinput">Card Number</label>
                 <div class="col-sm-4">
-                  <input type="text" placeholder="" class="form-control" required>
+                  <input type="text" placeholder="" class="form-control" name="cardnumber" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-sm-2 control-label">Expiry Date</label>
                     <div class="col-sm-4">
-                                <SELECT NAME="CCExpiresMonth" required>
+                                <SELECT NAME="expirydatemonth" required>
                                     <OPTION VALUE="" SELECTED>--Month--
                                     <OPTION VALUE="01">January (01)
                                     <OPTION VALUE="02">February (02)
@@ -84,7 +143,7 @@
                                     <OPTION VALUE="11">November (11)
                                     <OPTION VALUE="12">December (12)
                                   </SELECT> /
-                                  <SELECT NAME="CCExpiresYear" required>
+                                  <SELECT NAME="expirydateyear" required>
                                     <OPTION VALUE="" SELECTED>--Year--
                                     <OPTION VALUE="04">2015
                                     <OPTION VALUE="05">2016
@@ -102,7 +161,7 @@
                         </div>
                     </div>  
                     <div class="form-group">
-                        <label class="col-sm-2 control-label" for="textinput">Security Code</label>
+                        <label class="col-sm-2 control-label" for="textinput" >Security Code</label>
                         <div class="col-sm-2">
                           <input type="text" placeholder="" class="form-control" required>
                           <p><a data-toggle="modal" data-target="#myModal">what is this?</a></p>
@@ -135,19 +194,19 @@
         <fieldset>
             <legend>Billing Information</legend>
             <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput">Address 1</label>
+                <label class="col-sm-2 control-label" for="textinput" name="add1">Adress 1</label>
                 <div class="col-sm-8">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput">Address 2</label>
+                <label class="col-sm-2 control-label" for="textinput" name="add2">Adress 2</label>
                 <div class="col-sm-8">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput">Phone Number</label>
+                <label class="col-sm-2 control-label" for="textinput" name="phone">Phone Number</label>
                 <div class="col-sm-4">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
@@ -155,7 +214,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="textinput">Email Address</label>
                 <div class="col-sm-4">
-                  <input type="text" placeholder="" class="form-control" required>
+                  <input type="text" placeholder="" class="form-control" name="email" required>
                 </div>
               </div>
         </fieldset>
@@ -165,19 +224,23 @@
             <div class="form-group">
 
                 <div >
-                  <input type="submit" class="form-control" value="Submit" style="width: 300px; margin: 0 auto;" onclick="myfunction()">
-                  <script type="text/javascript">
-                      function myfunction(){
-
-                        window.location.href="payok.php"
-                      }
-                  </script>
+                  <input type="submit" class="form-control" value="Submit" style="width: 300px; margin: 0 auto;">
+               
                 </div>
              </div>
 
         <hr>
     </form>
-
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>WEBTEK 2015</p>
+                </div>
+            </div>
+        </footer>
+        </div>
+    </div>
     <!-- /.container -->
     <!-- validate form -->
 
