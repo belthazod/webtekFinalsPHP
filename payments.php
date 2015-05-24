@@ -79,7 +79,45 @@
                                     <h4 class="modal-title" id="myModalLabel">Enrolled Schedule</h4>
                                   </div>
                                   <div class="modal-body">
-                                    <p>Sched goes here
+                                    <table class="table">
+      <thead>
+        <tr>
+          <th>Class Code</th>
+          <th>Course Number</th>
+          <th>Descriptive Title</th>
+          <th>Time and Day</th>
+      <th>Room</th>
+      <th>Units</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+      $sql = "SELECT count(classcode) as count, classcode,courseno, description, days, class.time, room
+from student natural join enrollment natural join enrollmentdetails join class using(classcode)
+    join course using (courseno) where idno = ".$_SESSION["idno"];
+ 
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+
+              echo '<tr>
+                      <td>' . $row["classcode"] . '</td>
+                      <td>' . $row["courseno"] . '</td>
+                      <td>' . $row["description"] . '</td>
+                      <td>' . $row["time"] . '</td>
+                      <td>' . $row["days"] . '</td>
+                      <td>' . $row["room"] . '</td>
+
+                  </tr>';
+                
+                }
+              }
+              ?>
+
+      </tbody>
+    </table>
                                   </div>
                             </div>
                         </div>

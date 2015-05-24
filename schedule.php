@@ -38,7 +38,7 @@
       </thead>
       <tbody>
       <?php
-      $sql = "SELECT classcode,courseno, description, days, class.time, room
+      $sql = "SELECT count(classcode) as count, classcode,courseno, description, days, class.time, room
 from student natural join enrollment natural join enrollmentdetails join class using(classcode)
     join course using (courseno) where idno = ".$_SESSION["idno"];
  
@@ -46,7 +46,7 @@ from student natural join enrollment natural join enrollmentdetails join class u
           if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
-                
+
               echo '<tr>
                       <td>' . $row["classcode"] . '</td>
                       <td>' . $row["courseno"] . '</td>
@@ -56,6 +56,7 @@ from student natural join enrollment natural join enrollmentdetails join class u
                       <td>' . $row["room"] . '</td>
 
                   </tr>';
+                
                 }
               }
               ?>

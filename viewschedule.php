@@ -36,9 +36,13 @@ $param = $_GET['idno'];
 
         </tr>
         <?php
-        $query = "SELECT classcode, courseno, description, time, days,room, units from class natural join course where idno = $param"; 
+        $query = "SELECT count(classcode), classcode, courseno, description, time, days,room, units from class natural join course where idno = $param"; 
         $rs = $conn->query($query);
 							while($resultRow = $rs->fetch_assoc()) {
+
+                if ($resultRow['count'] == 0){
+                  echo '<p> Ypu have not enrolled yet, please Pre enroll before viewing your schedule </p>';
+                }else
 							echo '<tr>
 									<td>'. $resultRow['classcode'] .'</td>
 									<td>'. $resultRow['courseno'] .'</td>

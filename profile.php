@@ -47,7 +47,7 @@
                value="<?php echo $resultRow['idno'] ?>" 
                disabled/>
             </div>
-
+           
             <label class="col-sm-2 control-label" for="textinput">Course</label>
             <div class="col-sm-2">
               <input type="email" class="form-control" id="inputEmail3" 
