@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: enrollment
+-- Host: localhost    Database: enrollment
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -201,7 +201,7 @@ DROP TABLE IF EXISTS `enrollment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `enrollment` (
-  `enrolid` int(11) NOT NULL,
+  `enrolid` int(11) NOT NULL AUTO_INCREMENT,
   `date` date NOT NULL,
   `time` time NOT NULL,
   `validuntil` date NOT NULL,
@@ -211,9 +211,8 @@ CREATE TABLE `enrollment` (
   `status` enum('reserved','enrolled') NOT NULL,
   `totalUnits` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`enrolid`),
-  KEY `idno_idx` (`idno`),
-  CONSTRAINT `idno` FOREIGN KEY (`idno`) REFERENCES `student` (`idno`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `idno_idx` (`idno`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,11 +237,11 @@ CREATE TABLE `enrollmentdetails` (
   `classcode` int(11) NOT NULL,
   `semester_id` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`enrolid`,`classcode`),
-  KEY `fk_ed_classcode_idx` (`classcode`),
-  KEY `fk_ed_semester_idx` (`semester_id`),
-  CONSTRAINT `fk_ed_classcode` FOREIGN KEY (`classcode`) REFERENCES `class` (`classcode`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ed_enrolid` FOREIGN KEY (`enrolid`) REFERENCES `enrollment` (`enrolid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ed_semester` FOREIGN KEY (`semester_id`) REFERENCES `semester` (`semester_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `classcode_idx` (`classcode`),
+  KEY `sem_idx` (`semester_id`),
+  CONSTRAINT `classcode` FOREIGN KEY (`classcode`) REFERENCES `class` (`classcode`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `sem` FOREIGN KEY (`semester_id`) REFERENCES `semester` (`semester_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `enrolid` FOREIGN KEY (`enrolid`) REFERENCES `enrollment` (`enrolid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -502,4 +501,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-24  3:07:11
+-- Dump completed on 2015-05-24 12:58:08
