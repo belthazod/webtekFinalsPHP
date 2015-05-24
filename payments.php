@@ -31,7 +31,7 @@
         
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="home.php">Home</a>
+                    <li><a href="index.html">Home</a>
                     </li>
                     <li class="active">Payment</li>
                 </ol>
@@ -81,9 +81,8 @@
                     </div> 
           <!-- Text input-->
  
-        <fieldset>
+    <fieldset>
     <div class="row">
-    <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Breakdown of Fees</div>
 
@@ -140,19 +139,32 @@
     
   </table>
 </div>
-
+</fieldset>
 </form>
+
 	<br>
 	<br>
     <fieldset>
     	<h4>Payment Method</h4>
-    	<p><a href="">On-site Payment (Cash, Cheque)</a></p>
-    	<p><a href="cc-payment.html">Online Payment (Credit Card)</a></p>
+    		<input type="radio" id="onsite" name="amount" value="onsi">On-Site Payment
+         	<input type="radio" id="online" name="amount" value="onli">Online Payment	
+            <br>
+            <br>
+         	<button onclick="myfunction()">Next</button>
+    </fieldset>              
+        <script>
+            function myfunction(){
 
-    </fieldset>               
-            
+                if (document.getElementById('onsite').checked) {
+                    window.location.href = "";
+                } else if (document.getElementById('online').checked){
+                    window.location.href = "cc-payment.php";
+
+                }           
+            }
+        
+        </script>    
         <hr>
-   </form>
         <!-- Footer -->
         <footer>
             <div class="row">

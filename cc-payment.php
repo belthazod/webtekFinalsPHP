@@ -165,7 +165,13 @@
             <div class="form-group">
 
                 <div >
-                  <input type="submit" class="form-control" value="Submit" style="width: 300px; margin: 0 auto;" >
+                  <input type="submit" class="form-control" value="Submit" style="width: 300px; margin: 0 auto;" onclick="myfunction()">
+                  <script type="text/javascript">
+                      function myfunction(){
+
+                        window.location.href="payok.php"
+                      }
+                  </script>
                 </div>
              </div>
 
