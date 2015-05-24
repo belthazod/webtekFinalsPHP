@@ -1,4 +1,4 @@
-  <!-- Navigation -->
+<!-- Navigation -->
   <!DOCTYPE html>
 <html lang="en">
 
@@ -105,20 +105,20 @@
                                         </div>
                                         </ul>
                                     <script>
-                                    var notifCount = document.getElementById('notif').getElementsByTagName('<li>');
+                                    var notifCount = document.getElementById('notif').getElementsByTagName('li');
                                     document.getElementById('notifCount').innerHTML = notifCount.length;
-                                    alert(notifCount.length);
+                                    
                                     </script>
 
                                     </li>
                                 </ul>
-
+                              
                      
                                     
 
                                 
                     <ul class="nav navbar-nav navbar-right ">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" ><span class="label label label-info">Profile</span> 
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile" ><span><?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></span>
                                         <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li>
@@ -132,8 +132,7 @@
                                                            echo '<img src="data:image/jpeg;base64,'.base64_encode( $_SESSION['image'] ).'"/>';
                                                            ?>
                                                            
-                                                            <p class="text-center small">
-                                                                <a href="changephoto.php" class="btn btn-default btn-sm">Change Photo</a>
+                                                      
                                                         </div> 
                                                         <div class="col-md-7">
                                                             <span><?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></span>
@@ -141,10 +140,10 @@
                                                                <?php echo $_SESSION['idno']?></p>
                                                             <div class="divider">
                                                             </div>
-
-
-                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="label label label-info">View Profile</a>   <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="label label label-info">View Schedule</a>                                                        
-                                                          
+                                                            
+                                                            <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="">View Schedule</a>                                                        
+                                                           <br>
+                                                            <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="">View Profile</a> 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,6 +170,49 @@
 
                                     </li>
                                 </ul>
+
+                                <ul class="nav navbar-nav ">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile2" ><span><?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></span>
+                                        <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    
+
+                                                        
+
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-6">
+                                                             <a href= <?php echo '"profile.php?idno="' . $_SESSION['idno'] . '"'?> class="">View Profile</a> 
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                            <a href= <?php echo '"schedule.php?idno="' . $_SESSION['idno'] . '"'?> class="">View Schedule</a>                                                        
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-6">
+                                                            <a href="passwordform.php" >Change Password</a>
+                                                            </div>
+                                                             <div class="col-md-6">
+                                                            <a href="includes/logout.php" >Sign Out</a>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                </div>
+                                               
+
+
+                                            </li>
+                                    
+                                        </ul>
+
+
+                                    </li>
+                                </ul>
+
+
 
                               
 

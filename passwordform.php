@@ -6,22 +6,22 @@
 
      include 'includes/dbconnection.php';
      include 'includes/header.php';
-include 'includes/headerelements.php'; 
+		include 'includes/headerelements.php'; 
      ?>
 
 
 </head>
       <?php include 'includes/nav.php';?> 
-<div class="container">
-<div class="row">
-<div class="col-sm-12">
+
+
 
 <body>
-	<h1>Change Password</h1>
-	</div>
-</div>
+	
+
+
 <div class="row">
 <div class="col-sm-6 col-sm-offset-3">
+	<h1>Change Password</h1>
 	<p class="text-center">Use the form below to change your password. Your password cannot be the same as your username.</p>
 	<form method="post" id="passwordForm" action="includes/changepassword.php">
 	<?php 
@@ -68,6 +68,11 @@ include 'includes/headerelements.php';
 </div><!--/col-sm-6-->
 </div><!--/row-->
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+     <!-- Bootstrap Core JavaScript -->
 </body>
 </html>
