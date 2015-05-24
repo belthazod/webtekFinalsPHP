@@ -122,19 +122,22 @@ function displayUnits(event) {
     var targetTable = document.getElementById('t_draggable2');
     var targetTable2 = document.getElementById('t_draggable1');
     var units = 0;
-
     for (var c = 1; c < targetTable.rows.length; c++) {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
+      if (targetTable.rows.item(c).cells.length > 6) {  
         targetTable.rows.item(c).cells.item(7).className="none";
         targetTable.rows.item(c).cells.item(8).className="none";
         targetTable.rows.item(c).cells.item(9).className="none";
+      }
 
     }
 
     for (var d = 1; d < targetTable2.rows.length; d++) {
+      if (targetTable2.rows.item(c).cells.length > 6) {
         targetTable2.rows.item(d).cells.item(7).className="text-left";
         targetTable2.rows.item(d).cells.item(8).className="text-left";
         targetTable2.rows.item(d).cells.item(9).className="text-left";
+      }
     }
 
     p.innerHTML = units;
@@ -217,38 +220,36 @@ function selectBlock() {
     }
 
     copy.id = 'addSubj';
-    // copy.deleteRow(0);
     var ch = copyhead.children; 
     var c = copy.children;
+
+    var block = document.getElementById('currentBlock').textContent;
+    var blkno = block.substr(block.length - 1);
     
     for (var i = 0; i < ch.length; i++) {  
         var srchead = document.getElementById('blkhead');
-        var src = document.getElementById('blk');
         var cpyhead = sourcehead.cloneNode(true);
-        var cpy = source.cloneNode(true);
-        cpy.id = 'addSubj';
-        // cpy.deleteRow(0);
         var dh = cpyhead.children;
-        var d = cpy.children;
-
         destination.appendChild(dh[i]);
-
     }
 
     for (var i = 0; i < c.length; i++) {  
-        var srchead = document.getElementById('blkhead');
+      if (blkno == '1') {
         var src = document.getElementById('blk');
-        var cpyhead = sourcehead.cloneNode(true);
-        var cpy = source.cloneNode(true);
-        cpy.id = 'addSubj';
-        // cpy.deleteRow(0);
-        var dh = cpyhead.children;
-        var d = cpy.children;
+      } else if (blkno == '2') {
+        var src = document.getElementById('blk').nextSibling;
+      } else if (blkno == '3') {
+        var src = document.getElementById('blk').nextSibling.nextSibling;
+      } else if (blkno == '4') {
+        var src = document.getElementById('blk').nextSibling.nextSibling.nextSibling;
+      }
+       
 
+        var cpy = src.cloneNode(true);
+        cpy.id = 'addSubj';
+        var d = cpy.children;
         destination.appendChild(d[i]);
     }    
-
-   // $('#subjectsModal').modal('hide');
 
    displayUnits();
 }
