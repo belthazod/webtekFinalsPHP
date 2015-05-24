@@ -169,12 +169,7 @@ for($block = 1;  $block <= $numberOfBlocks ; $block++){
               </div>
             </div>
 
-            <nav>
-  <ul class="pager">
-    <li><a href="#">Previous</a></li>
-    <li><a href="#">Next</a></li>
-  </ul>
-</nav>
+     
             <div class="modal-footer">
               <button type="button" class="btn btn-default" onclick ="previousBlock()" >Previous</button>
               <button type="button" class="btn btn-default" onclick="nextBlock()" >Next</button>
