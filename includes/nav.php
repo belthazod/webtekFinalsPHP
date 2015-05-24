@@ -160,7 +160,8 @@
                                                             <div class="col-md-6">
 
 
-                                                                <a href="passwordform.php" class="btn btn-default btn-sm">Change Password</a>
+                                                              <a href="password.php" class="btn btn-primary" data-toggle="modal" data-target="#modal">Change Password</a>
+															
                                             </div>
                                                             <div class="col-md-6">
                                                                 <a href="includes/logout.php" class="btn btn-default btn-sm pull-right">Sign Out</a>
@@ -231,3 +232,39 @@
         </div>
         <!-- /.container -->
     </nav>
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalLabel">Change password</h4>
+      </div>
+	  <br>
+	  <p class="text-center">Use the form below to change your password. Your password cannot be the same as your username.</p>
+	<form method="post" id="passwordForm" action="includes/changepassword.php"><br>
+      <div class="modal-body">
+        <form> 
+		  <div class="form-group">      
+           <label for="old-password" class="control-label">Old password:</label>
+           <input type="password" class="input-lg form-control" name="password1" id="password1" autocomplete="off" required>  
+		   </div>
+		  <div class="form-group">
+            <label for="new-password" class="control-label">New password:</label>
+            <input type="password" class="input-lg form-control" name="password2" id="password1"  autocomplete="off" required>
+          </div>
+		  <div class="form-group">
+            <label for="new-password2" class="control-label">Repeat new password:</label>
+            <input type="password" class="input-lg form-control" name="password3" id="password2"  autocomplete="off">
+          </div>
+        </form>
+      </div>
+	  </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" value="Save">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
