@@ -124,7 +124,7 @@ function displayUnits(event) {
     var units = 0;
     for (var c = 1; c < targetTable.rows.length; c++) {
         units = units + Number(targetTable.rows.item(c).cells.item(6).textContent);
-      if (targetTable.rows.item(c).cells.length > 6) {  
+      if (targetTable.rows.item(c).cells.length > 7) {  
         targetTable.rows.item(c).cells.item(7).className="none";
         targetTable.rows.item(c).cells.item(8).className="none";
         targetTable.rows.item(c).cells.item(9).className="none";
@@ -133,7 +133,7 @@ function displayUnits(event) {
     }
 
     for (var d = 1; d < targetTable2.rows.length; d++) {
-      if (targetTable2.rows.item(c).cells.length > 6) {
+      if (targetTable2.rows.item(c).cells.length > 7) {
         targetTable2.rows.item(d).cells.item(7).className="text-left";
         targetTable2.rows.item(d).cells.item(8).className="text-left";
         targetTable2.rows.item(d).cells.item(9).className="text-left";
