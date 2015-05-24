@@ -314,6 +314,38 @@ LOCK TABLES `payment` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `paymentdetails`
+--
+
+DROP TABLE IF EXISTS `paymentdetails`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `paymentdetails` (
+  `orno` varchar(45) NOT NULL,
+  `cardholder` varchar(255) NOT NULL,
+  `cardnumber` varchar(45) NOT NULL,
+  `expirydatemonth` enum('01','02','03','04','05','06','07','08','09','10','11','12') NOT NULL,
+  `expirydateyear` int(2) NOT NULL,
+  `securitycode` int(8) NOT NULL,
+  `add1` varchar(255) NOT NULL,
+  `add2` varchar(255) NOT NULL,
+  `phone` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  PRIMARY KEY (`orno`),
+  UNIQUE KEY `orno_UNIQUE` (`orno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `paymentdetails`
+--
+
+LOCK TABLES `paymentdetails` WRITE;
+/*!40000 ALTER TABLE `paymentdetails` DISABLE KEYS */;
+/*!40000 ALTER TABLE `paymentdetails` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `schedule`
 --
 
@@ -505,4 +537,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-25  0:58:14
+-- Dump completed on 2015-05-25  1:26:32

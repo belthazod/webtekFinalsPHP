@@ -30,6 +30,65 @@
     <div class="col-md-12">
       
           <!-- Form Name -->
+          <fieldset>
+    <div class="row">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Breakdown of Fees</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+    <th>Reference</th>
+    <th>Explanation</th>
+    <th>Number of Units </th>
+    <th>Amount</th>
+    </tr>
+    
+    <tr>
+    <th></th>
+    <th>Beginning Balance</th>
+    <th>n/a</th>
+    <th>-1,000.00</th>
+    </tr>
+    
+    <tr>
+    <th>General subjects</th>
+    <th>Tuition fee @300.00/unit</th>
+    <th>2</th>
+    <th>600.00</th>
+    </tr>
+    
+    <tr>
+    <th>Major subjects</th>
+    <th>Tuition fee @500.00/unit</th>
+    <th>4</th>
+    <th>2,000.00</th>
+    </tr>
+
+    <tr>
+    <th>Laboratory Fees</th>
+    <th>Laboratory and other fees</th>
+    <th>n/a</th>
+    <th>15,000.00</th>
+    </tr>
+    
+    <tr>
+    <th></th>
+    <th></th>
+    <th>Total Balance</th>
+    <th>16,600.00</th>
+    </tr>
+    
+    <tr>
+    <th></th>
+    <th></th>
+    <th>Downpayment</th>
+    <th>8,600.00</th>
+    </tr>
+    
+  </table>
+</div>
+</fieldset>
           <h1>Secure Payment</h1>
           <br>
           <br>
