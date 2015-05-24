@@ -11,11 +11,12 @@
      include 'includes/header.php'; 
 
                         if(isset($_GET["loggedout"]) && $_GET["loggedout"]==true){
-                        echo ' <div class="col-sm-6 col-md-6">
-								<div class="alert alert-info">
-									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-										×</button>
-								   <span class="glyphicon glyphicon-ok"></span>
+                        echo ' 
+                        <div class="col-md-3"> </div>
+                        <div class="col-md-6">
+								<div class="alert alert-danger animated shake">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+								   <span class="glyphicon glyphicon-remove"></span>
 									<hr class="message-inner-separator">
 									<p>
 									 You are not logged in..</p>
@@ -23,11 +24,11 @@
 							</div>';
                         }
                         if(isset($_GET["failed"]) && $_GET["failed"]==true){
-                        echo ' <div class="col-sm-6 col-md-6">
-								<div class="alert alert-info">
-									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-										×</button>
-								   <span class="glyphicon glyphicon-ok"></span> <strong>Message</strong>
+                        echo ' < <div class="col-md-3"> </div>
+                        <div class="col-md-6">
+								<div class="alert alert-danger animated shake">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                   <span class="glyphicon glyphicon-remove"></span>
 									<hr class="message-inner-separator">
 									<p>
 										Your username or password is incorrect or<br>

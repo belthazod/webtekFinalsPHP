@@ -14,11 +14,12 @@
     
     <link href="css/animate.css" rel="stylesheet">
 
-    <link href="js/animate.css" rel="stylesheet">
+  
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    
      <script src="js/script.js"></script>
      <script src="js/TweenLite.min.js"></script>
 

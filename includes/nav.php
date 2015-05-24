@@ -66,7 +66,7 @@
                                             </li>
 
                                              <li>
-                                            <div class="alert alert-info">
+                                            <div class="alert alert-info alert-dismissable">
                                                 <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
                                             </div>
                                             </li>
