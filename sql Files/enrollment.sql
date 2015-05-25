@@ -342,6 +342,7 @@ CREATE TABLE `paymentdetails` (
 
 LOCK TABLES `paymentdetails` WRITE;
 /*!40000 ALTER TABLE `paymentdetails` DISABLE KEYS */;
+INSERT INTO `paymentdetails` VALUES ('','Jane Doe','00123001','01',20,0,'Baguio','Manila','639785256000','nicb@yahoo.com');
 /*!40000 ALTER TABLE `paymentdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -537,4 +538,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-25  1:26:32
+-- Dump completed on 2015-05-25  9:34:08

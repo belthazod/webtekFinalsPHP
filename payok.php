@@ -68,9 +68,7 @@
       </thead>
       <tbody>
       <?php
-      $sql = "SELECT count(classcode) as count, classcode,courseno, description, days, class.time, room
-from student natural join enrollment natural join enrollmentdetails join class using(classcode)
-    join course using (courseno) where idno = ".$_SESSION["idno"];
+      $sql = "SELECT  classcode, courseno, description, class.time, days,room, units FROM enrollmentdetails join class using (classcode) join course using (courseno) join enrollment using (enrolid) where idno =".$_SESSION["idno"];
  
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {

@@ -194,13 +194,13 @@
         <fieldset>
             <legend>Billing Information</legend>
             <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput" name="add1">Adress 1</label>
+                <label class="col-sm-2 control-label" for="textinput" name="add1">Address 1</label>
                 <div class="col-sm-8">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="textinput" name="add2">Adress 2</label>
+                <label class="col-sm-2 control-label" for="textinput" name="add2">Address 2</label>
                 <div class="col-sm-8">
                   <input type="text" placeholder="" class="form-control" required>
                 </div>
